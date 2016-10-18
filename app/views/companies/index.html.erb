@@ -1,0 +1,5 @@
+<h3>All Companies</h3>
+
+<% @companies.each do |company| %>
+  <ul><%= link_to company.name, company_path(company) %> - <%= company.city %></ul>
+<% end %>
