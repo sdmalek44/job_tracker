@@ -1,3 +1,5 @@
+# Job Tracker
+
 ## Learning Goals
 
 * Use migrations to create tables with different data types including indexed foreign keys
@@ -9,7 +11,7 @@
 
 ## Project Specs
 
-You will be working with [this](ADD_LINK) to modify a personal job tracking app. Imagine that your close friend has learned just enough rails to be dangerous, and has started to create an app to track job opportunities they find interesting. They are planning to maintain this site themselves (i.e. they will be adding all companies and jobs, and don’t anticipate companies or other users posting/reviewing jobs). The application currently has the following functionality:
+You will be working with the existing code in this repository to modify a personal job tracking app. Imagine that your close friend has learned just enough rails to be dangerous, and has started to create an app to track job opportunities they find interesting. They are planning to maintain this site themselves (i.e. they will be adding all companies and jobs, and don’t anticipate companies or other users posting/reviewing jobs). The application currently has the following functionality:
 
 * Jobs can be created, read, updated, and deleted.
 * Jobs have a title, description, and level_of_interest.
