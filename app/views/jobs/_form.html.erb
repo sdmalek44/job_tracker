@@ -1,0 +1,12 @@
+<%= form_for [@company, @job] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :level_of_interest %>
+  <%= f.number_field :level_of_interest %>
+
+  <%= f.submit %>
+<% end %>
