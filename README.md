@@ -13,13 +13,17 @@
 
 You will be working with the existing code in this repository to modify a personal job tracking app. Imagine that your close friend has learned just enough rails to be dangerous, and has started to create an app to track job opportunities they find interesting. They are planning to maintain this site themselves (i.e. they will be adding all companies and jobs, and don’t anticipate companies or other users posting/reviewing jobs). The application currently has the following functionality:
 
-* Jobs can be created, read, updated, and deleted.
+* Jobs can be created and read.
 * Jobs have a title, description, and level_of_interest.
 * Companies can be created, read, updated, and deleted.
 * Companies have a name and location.
 * A Job `belongs_to` a Company, and a Company `has_many` jobs.
 
 You will be to add the following functionality to this application.
+
+### Jobs
+
+* You need to add the update and delete functionality for a Job.:w
 
 ### Categories
 
