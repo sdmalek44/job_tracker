@@ -41,7 +41,8 @@ class CompaniesController < ApplicationController
     company = Company.find(params[:id])
     company.delete
 
-    redirect companies_path
+    flash[:success] = "#{company.name} was successfully deleted!"
+    redirect_to companies_path
   end
 
 
