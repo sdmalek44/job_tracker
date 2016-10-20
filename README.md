@@ -112,3 +112,10 @@ You will be to add the following functionality to this application.
 * 3: The application has been styled, but the user may need to use the nav-bar to enter a URL or back button to get to access some functionality.
 * 2: The application has limited styling, and it may not be clear how to navigate the application.
 * 1: The application has little to no styling and it is difficult to navigate.
+
+### 7) Testing
+
+4: Project has a running test suite that exercises the application at multiple levels
+3: Project has a running test suite that tests and multiple levels but fails to cover some features
+2: Project has sporadic use of tests and multiple levels
+1: Project did not really attempt to use TDD
