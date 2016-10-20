@@ -115,7 +115,7 @@ You will be to add the following functionality to this application.
 
 ### 7) Testing
 
-4: Project has a running test suite that exercises the application at multiple levels
-3: Project has a running test suite that tests and multiple levels but fails to cover some features
-2: Project has sporadic use of tests and multiple levels
-1: Project did not really attempt to use TDD
+* 4: Project has a running test suite that exercises the application at multiple levels
+* 3: Project has a running test suite that tests and multiple levels but fails to cover some features
+* 2: Project has sporadic use of tests and multiple levels
+* 1: Project did not really attempt to use TDD
