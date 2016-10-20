@@ -23,7 +23,7 @@ You will be to add the following functionality to this application.
 
 ### Jobs
 
-* You need to add the update and delete functionality for a Job.:w
+* You need to add the update and delete functionality for a Job.
 
 ### Categories
 
