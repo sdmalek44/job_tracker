@@ -14,9 +14,9 @@
 You will be working with the existing code in this repository to modify a personal job tracking app. Imagine that your close friend has learned just enough rails to be dangerous, and has started to create an app to track job opportunities they find interesting. They are planning to maintain this site themselves (i.e. they will be adding all companies and jobs, and don’t anticipate companies or other users posting/reviewing jobs). The application currently has the following functionality:
 
 * Jobs can be created and read.
-* Jobs have a title, description, and level_of_interest.
+* Jobs have a title, description, a city, and level_of_interest.
 * Companies can be created, read, updated, and deleted.
-* Companies have a name and location.
+* Companies have a name.
 * A Job `belongs_to` a Company, and a Company `has_many` jobs.
 
 You will be to add the following functionality to this application.
@@ -36,7 +36,7 @@ You will be to add the following functionality to this application.
 
 ### Comments
 
-* When the user visits the page for a specific Job, in addition to information about the job there is a form that allows them to enter a Comment for that Job (e.g. “Spoke to hiring manager, Jacob. Plan to follow up Monday.”). 
+* When the user visits the page for a specific Job, in addition to information about the job there is a form that allows them to enter a Comment for that Job (e.g. “Spoke to hiring manager, Jacob. Plan to follow up Monday.”).
 * Each comment has content (also created_at and updated_at).
 * When the user submits a new comment, they are redirected back to the page for that specific job and the comment appears on the page.
 * The user can leave multiple comments on a job and the most recent comments are shown above older comments (in reverse of the order in which they were created).
@@ -49,11 +49,11 @@ You will be to add the following functionality to this application.
 
 ### Analysis
 
-* The user can visit `/companies?sort=location` to view a list of the companies with their respective jobs sorted by `city`.
+* The user can visit `/jobs?sort=location` to view a list of the jobs sorted by `city`.
 * The user can visit `/dashboard` to see
 * A count of jobs by `level_of_interest`
 * The top three companies ranked by average level of interest along with their respective average level of interest.
-* A count of jobs by `location` with a link to visit a page with companies only in that location. The url should be `/companies?location=Denver`.
+* A count of jobs by `location` with a link to visit a page with jobs only in that location. The url should be `/jobs?location=Denver`.
 * The user can visit `/jobs?sort=interest` to view a list of the jobs sorted by `level_of_interest`.
 
 ## Extensions:
@@ -86,7 +86,7 @@ You will be to add the following functionality to this application.
 ### 3) Controllers
 
 * 4: The developer has moved logic out of the controllers and into the models/POROs where appropriate. The developer uses strong params in a private method. Instance variables being passed to views are appropriately named and limited in number. The developer can speak to each choice made when questioned.
-* 3: Some logic may leak into the controllers that would more appropriately exist in a model/PORO. The developer may pass more instance variables than necessary to the view. 
+* 3: Some logic may leak into the controllers that would more appropriately exist in a model/PORO. The developer may pass more instance variables than necessary to the view.
 * 2: Significant logic exists in the controllers. Methods may be more complicated than necessary. Most functionality is still supported.
 * 1: Significant functionality may be missing. Significant logic may be present, and it is difficult to understand at a glance the purpose of each method.
 
