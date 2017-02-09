@@ -1,9 +1,9 @@
 <h3>All Companies</h3>
 
 <% @companies.each do |company| %>
-  <ul class=company_<%= company.id %>>
+  <div class=company_<%= company.id %>>
     <%= link_to company.name, company_path(company) %><br>
     <%= link_to "Edit", edit_company_path(company) %>
     <%= link_to "Delete", company_path(company), method: "delete" %>
-  </ul>
+  </div>
 <% end %>
