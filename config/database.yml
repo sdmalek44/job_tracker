@@ -1,11 +1,11 @@
-# PostgreSQL. Versions 8.2 and up are supported.
+# PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
 # On OS X with Homebrew:
-#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+#   gem install pg -- --with-pg-config=/usr/local/bin/jobtracker_config
 # On OS X with MacPorts:
-#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/jobtracker_config
 # On Windows:
 #   gem install pg
 #       Choose the win32 build.
@@ -17,19 +17,19 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
+  # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: job-tracker_development
+  database: jobtracker_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: job-tracker
+  #username: pg
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: job-tracker_test
+  database: jobtracker_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: job-tracker_production
-  username: job-tracker
-  password: <%= ENV['JOB-TRACKER_DATABASE_PASSWORD'] %>
+  database: jobtracker_production
+  username: pg
+  password: <%= ENV['jobtracker_DATABASE_PASSWORD'] %>

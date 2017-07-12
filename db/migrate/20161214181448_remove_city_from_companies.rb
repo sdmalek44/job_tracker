@@ -1,4 +1,4 @@
-class RemoveCityFromCompanies < ActiveRecord::Migration
+class RemoveCityFromCompanies < ActiveRecord::Migration[5.1]
   def change
     remove_column :companies, :city
   end
