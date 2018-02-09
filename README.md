@@ -122,7 +122,7 @@ The rubric below describes additional functionality that you will need to add to
 
 [ ] The application has been styled.
 
-[ ] The application uses a color scheme.
+[ ] The application uses a balanced, considered color scheme.
 
 [ ] The application implements a font (that is not the default font).
 
