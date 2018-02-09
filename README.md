@@ -118,7 +118,7 @@ The rubric below describes additional functionality that you will need to add to
 
 [ ] Developer uses partials to reduce duplication of code in the view layer
 
-### User Experience
+### User Experience/Usability
 
 [ ] The application has been styled.
 
@@ -132,7 +132,7 @@ The rubric below describes additional functionality that you will need to add to
 
 [ ] Space and text is balanced. White space is used to visually separate content. 
 
-[ ] The user can intuitively navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
+[ ] The application is easily usable. The user can intuitively navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 ### Testing
 
