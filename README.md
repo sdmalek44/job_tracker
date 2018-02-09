@@ -132,7 +132,7 @@ The rubric below describes additional functionality that you will need to add to
 
 [ ] Space and text is balanced. White space is used to visually separate content. 
 
-[ ] The user can intuitvely navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
+[ ] The user can intuitively navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 ### Testing
 
