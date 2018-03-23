@@ -24,6 +24,8 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Jobs
 
+- [ ] A user can create a job
+- [ ] A user can view a job
 - [ ] A user can update a job
 - [ ] A user can delete a job
 
@@ -36,16 +38,16 @@ The rubric below describes additional functionality that you will need to add to
 - [ ] When the user creates a new Job, they are required to select its Category from a drop down menu of existing categories. They also see a link to create a new Category.
 - [ ] When the user visits a page for a specific Category, they see a list of Jobs in that Category.
 
-### Comments
+### Job Comments
 
 - [ ] When the user visits the page for a specific Job, in addition to information about the job there is a form that allows them to enter a Comment for that Job (e.g. “Spoke to hiring manager, Jacob. Plan to follow up Monday.”).
 - [ ] Each comment has content (also created_at and updated_at).
 - [ ] When the user submits a new comment, they are redirected back to the page for that specific job and the comment appears on the page.
 - [ ] The user can leave multiple comments on a job and the most recent comments are shown above older comments (in reverse of the order in which they were created).
 
-### Contacts
+### Company Contacts
 
-- [ ] When the user visits the page for a specific Company, in addition to information about the job there is a form that allows them to enter a Contact for that Company (e.g. “Penelope Santorini”, “Hiring Manager”, “penelope@wooo.com”).
+- [ ] When the user visits the page for a specific Company, in addition to information about the company there is a form that allows them to enter a Contact for that Company (e.g. “Penelope Santorini”, “Hiring Manager”, “penelope@wooo.com”).
 - [ ] Each Contact has a full name, position, email, and company (which relates to the company you’ve already created). It should be possible for a Company to have more than one Contact, but a Contact only works at one Company.
 - [ ] When the user submits a new contact, they are redirected back to the page for that specific company and the contact appears on the page.
 
