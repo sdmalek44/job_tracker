@@ -139,15 +139,15 @@ following criteria:
 
 ### 3. Controller
 
-* Exceeds Expectations: Controller show significant effort to push logic down the stack
+* Exceeds Expectations: Controller show significant effort to push logic down the stack, utilizing SRP & DRY
 * Meets Expectations: Controller is generally well organized with three or fewer methods needing refactoring
-* Below Expectations: There are four to seven controller methods that should have been refactored
+* Below Expectations: There are four or more controller methods that should have been refactored
 
 ### 4. Models
 
 * Exceeds Expectations: Models show excellent organization, refactoring, and appropriate use of ActiveRecord features
 * Meets Expectations: Models show an effort to push logic down the stack, but need more internal refactoring
-* Below Expectations: Models are somewhat messy and/or make poor use of ActiveRecord features
+* Below Expectations: Models are somewhat messy
 
 ### 5. ActiveRecord
 
@@ -158,7 +158,7 @@ following criteria:
 ### 6. Testing
 
 * Exceeds Expectations: Project has a running test suite that covers all functionality, exercises the application at multiple levels, and covers edge cases
-* Meets Expectations: Project has a running test suite that tests at functionalty, at multiple levels
+* Meets Expectations: Project has a running test suite that tests all functionalty, at multiple levels
 * Below Expectations: Project has sporadic use of tests 
 
 ### 7. Usability
