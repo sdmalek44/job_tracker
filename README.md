@@ -10,7 +10,7 @@
 
 ## Project Specs
 
-You will be working with the existing code in this repository to modify a personal job tracking app. Imagine that your close friend has learned just enough rails to be dangerous, and has started to create an app to track job opportunities they find interesting. They are planning to maintain this site themselves (i.e. they will be adding all companies and jobs, and don’t anticipate companies or other users posting/reviewing jobs). The application currently has the following functionality:
+You will be working with the existing code in this repository to modify a personal job tracking app. Imagine that your close friend has learned just enough Rails to be dangerous, and has started to create an app to track job opportunities they find interesting. They are planning to maintain this site themselves (i.e. they will be adding all companies and jobs, and don’t anticipate companies or other users posting/reviewing jobs). The application currently has the following functionality:
 
 * Jobs can be created and read.
 * Jobs have a title, description, a city, and level_of_interest.
@@ -97,9 +97,9 @@ The rubric below describes additional functionality that you will need to add to
 - [ ] The application has been styled.
 - [ ] The application uses a balanced, considered color scheme.
 - [ ] The application implements a font (that is not the default font).
-- [ ] The application utilizes a nav bar. 
-- [ ] The style shows evidence of intentional layout. 
-- [ ] Space and text is balanced. White space is used to visually separate content. 
+- [ ] The application utilizes a nav bar.
+- [ ] The style shows evidence of intentional layout.
+- [ ] Space and text is balanced. White space is used to visually separate content.
 - [ ] The application is easily usable. The user can intuitively navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 ### Testing
@@ -127,9 +127,9 @@ following criteria:
 
 ### 1. Feature Completeness
 
-* Exceeds Expectations: All features are correctly implemented along with two extensions 
-* Meets Expectations: All features defined in the assignment are correctly implemented 
-* Below Expectations: There are one or two features missing or incorrectly implemented 
+* Exceeds Expectations: All features are correctly implemented along with two extensions
+* Meets Expectations: All features defined in the assignment are correctly implemented
+* Below Expectations: There are one or two features missing or incorrectly implemented
 
 ### 2. Views
 
@@ -153,13 +153,13 @@ following criteria:
 
 * Exceeds Expectations: Best choice ActiveRecord methods are used to solve each problem
 * Meets Expectations: ActiveRecord is utilized wherever it can be. There is no Ruby where there should be ActiveRecord
-* Below Expectations: Ruby is used to programatically solve problems where ActiveRecord could be used
+* Below Expectations: Ruby is used to programmatically solve problems where ActiveRecord could be used
 
 ### 6. Testing
 
 * Exceeds Expectations: Project has a running test suite that covers all functionality, exercises the application at multiple levels, and covers edge cases
-* Meets Expectations: Project has a running test suite that tests all functionalty, at multiple levels
-* Below Expectations: Project has sporadic use of tests 
+* Meets Expectations: Project has a running test suite that tests all functionality, at multiple levels
+* Below Expectations: Project has sporadic use of tests
 
 ### 7. Usability
 
