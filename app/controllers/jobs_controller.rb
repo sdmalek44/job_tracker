@@ -6,7 +6,7 @@ class JobsController < ApplicationController
 
   def new
     @company = Company.find(params[:company_id])
-    @job = Job.new()
+    @job = Job.new
   end
 
   def create
