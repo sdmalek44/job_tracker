@@ -13,3 +13,4 @@
 /tmp
 .byebug_history
 Gemfile.lock
+coverage

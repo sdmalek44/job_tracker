@@ -1,13 +1,26 @@
-Title: <%= @job.title %>
-<br>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Title: <%= @job.title %>
+    <br>
 
-Description: <%= @job.description %>
-<br>
+    Description: <%= @job.description %>
+    <br>
 
-Level of Interest: <%= @job.level_of_interest %>
-<br>
+    Level of Interest: <%= @job.level_of_interest %>
+    <br>
 
-City: <%= @job.city %>
-<br>
+    City: <%= @job.city %>
+    <br>
 
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
+    Company: <%= link_to @job.company.name, company_path(@job.company) %>
+    <br/>
+    <br/>
+    <%= link_to "Edit", edit_company_job_path(@job.company, @job) %>
+    <%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
+  </body>
+</html>
