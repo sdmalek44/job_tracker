@@ -4,8 +4,9 @@ describe 'features' do
   describe 'user visits /companies/#/jobs/#' do
     it 'user can delete a job' do
       company = Company.create!(name: 'Best Buy')
-      job_1 = company.jobs.create!(title: 'Cashier', level_of_interest: 12, city: 'Denver')
-      job_2 = company.jobs.create!(title: 'Janitor', level_of_interest: 67, city: 'San Diego')
+      category = Category.create!(title: "sports")
+      job_1 = company.jobs.create!(title: 'Cashier', level_of_interest: 12, city: 'Denver', category_id: category.id)
+      job_2 = company.jobs.create!(title: 'Janitor', level_of_interest: 67, city: 'San Diego', category_id: category.id)
 
       visit company_job_path(company, job_1)
       click_on 'Delete'
