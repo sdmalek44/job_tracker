@@ -1,0 +1,13 @@
+<%= form_for [@company, @job, @comment] do |f| %>
+  <div>
+    <%= f.label :author, "Your Name" %>
+    <%= f.text_field :author %>
+  </div>
+  <div class="">
+    <%= f.label :body, "Your Comment" %>
+    <%= f.text_area :body %>
+  </div>
+  <div class="">
+    <%= f.submit "Submit Comment" %>
+  </div>
+<% end %>
