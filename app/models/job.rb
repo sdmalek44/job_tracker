@@ -1,4 +1,4 @@
 class Job < ApplicationRecord
-  validates :title, :level_of_interest, :city, presence: true
+  validates_presence_of :title, :level_of_interest, :city
   belongs_to :company
 end
