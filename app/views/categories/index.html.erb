@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <%= link_to 'Create New Category', new_category_path %>
   <body>
     <% @categories.each do |category| %>
       <p><%= category.title %></p>

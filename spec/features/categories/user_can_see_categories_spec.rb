@@ -11,5 +11,12 @@ describe 'feature' do
       expect(page).to have_content("#{category_1.title}")
       expect(page).to have_content("#{category_2.title}")
     end
+    it 'user can create a new category' do
+      visit categories_path
+
+      click_on "Create New Category"
+
+      expect(current_path).to eq(new_category_path)
+    end
   end
 end
