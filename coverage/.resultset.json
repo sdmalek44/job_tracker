@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/environment.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/application.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/application.rb": [
         1,
         null,
         1,
@@ -28,12 +28,12 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/boot.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/environments/test.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/environments/test.rb": [
         1,
         null,
         null,
@@ -77,7 +77,7 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/assets.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/backtrace_silencers.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -99,18 +99,18 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/cookies_serializer.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/filter_parameter_logging.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/inflections.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -128,18 +128,18 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/mime_types.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/session_store.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/initializers/wrap_parameters.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -155,10 +155,12 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/config/routes.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/config/routes.rb": [
         1,
         1,
         1,
+        1,
+        null,
         1,
         null,
         null,
@@ -217,30 +219,13 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/helpers/application_helper.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/companies/user_deletes_a_company_spec.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/companies/user_creates_new_company_spec.rb": [
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/companies/user_edits_existing_company_spec.rb": [
-        1,
-        null,
-        1,
         1,
         1,
         1,
@@ -254,7 +239,40 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/companies/user_sees_all_companies_spec.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/companies/user_deletes_a_company_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/companies/user_edits_existing_company_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/companies/user_sees_all_companies_spec.rb": [
         1,
         null,
         1,
@@ -269,66 +287,7 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/companies/user_sees_one_company_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/jobs/user_creates_new_job_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/jobs/user_deletes_a_job_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/jobs/user_sees_a_job_spec.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/companies/user_sees_one_company_spec.rb": [
         1,
         null,
         1,
@@ -344,7 +303,66 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/jobs/user_sees_all_jobs_spec.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/jobs/user_creates_new_job_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/jobs/user_deletes_a_job_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/jobs/user_sees_a_job_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/jobs/user_sees_all_jobs_spec.rb": [
         1,
         null,
         1,
@@ -361,7 +379,7 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/features/jobs/user_updates_a_job_spec.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/features/jobs/user_updates_a_job_spec.rb": [
         1,
         null,
         1,
@@ -399,7 +417,7 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/models/company_spec.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/models/company_spec.rb": [
         1,
         null,
         1,
@@ -417,56 +435,6 @@
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/models/company.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/spec/models/job_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
         1,
         1,
         1,
@@ -483,13 +451,39 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/models/job.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/models/company.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/controllers/companies_controller.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/spec/models/job_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/models/job.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/controllers/companies_controller.rb": [
         1,
         1,
         3,
@@ -545,14 +539,14 @@
         null,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/controllers/application_controller.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/colinarmstrong/Turing/mod2/job-tracker/app/controllers/jobs_controller.rb": [
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/controllers/jobs_controller.rb": [
         1,
         1,
         5,
@@ -603,8 +597,21 @@
         2,
         null,
         null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/models/category.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/stephenmalek/turing/2module/projects/job_tracker/app/controllers/categories_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1530982828
+    "timestamp": 1530985655
   }
 }
