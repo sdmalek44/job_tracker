@@ -24,5 +24,6 @@
     <br/>
     <%= link_to "Edit", edit_company_job_path(@job.company, @job) %>
     <%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
+    <%= render partial: 'comment', collection: @job.comments.reverse %>
   </body>
 </html>
