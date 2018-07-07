@@ -11,12 +11,23 @@ describe 'feature' do
       expect(page).to have_content("#{category_1.title}")
       expect(page).to have_content("#{category_2.title}")
     end
+
     it 'user can create a new category' do
       visit categories_path
 
       click_on "Create New Category"
 
       expect(current_path).to eq(new_category_path)
+    end
+
+    it 'user can visit an edit category page' do
+      category = Category.create!(title: 'Medicine')
+
+      visit categories_path
+
+      click_on 'Edit'
+
+      expect(current_path).to eq(edit_category_path(category))
     end
   end
 end
