@@ -1,6 +1,9 @@
-class CommentController < ApplicationController
+class CommentsController < ApplicationController
   def create
-    @comment = Comment.new(comment_params)
+    @job = Job.find(params[:job_id])
+    @comment = @job.comments.create(comment_params)
+
+    redirect_to company_job_path(@comment.job.company, @comment.job)
   end
 
   private
