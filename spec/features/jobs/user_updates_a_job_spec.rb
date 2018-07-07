@@ -5,7 +5,8 @@ describe 'features' do
     describe 'user wants to update a job' do
       it 'can visit an edit page for that job' do
         company = Company.create!(name: 'Best Buy')
-        job = company.jobs.create!(title: 'Cashier', level_of_interest: 12, city: 'Denver')
+        category = Category.create!(title: "sports")
+        job = company.jobs.create!(title: 'Cashier', level_of_interest: 12, city: 'Denver', category_id: category.id)
 
         visit company_job_path(company, job)
         click_on 'Edit'
@@ -15,7 +16,8 @@ describe 'features' do
 
       it 'user can update a job through the edit page' do
         company = Company.create!(name: 'Best Buy')
-        job = company.jobs.create!(title: 'Cashier', description: 'Sales', level_of_interest: 12, city: 'Denver')
+        category = Category.create!(title: "sports")
+        job = company.jobs.create!(title: 'Cashier', description: 'Sales', level_of_interest: 12, city: 'Denver', category_id: category.id)
 
         visit edit_company_job_path(company, job)
 
