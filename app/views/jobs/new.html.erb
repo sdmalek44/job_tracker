@@ -1,5 +1,17 @@
-<h2>Create a new job at <%= @company.name %> here!</h2>
-
-<%= render partial: "form" %>
-<br/>
-<%= link_to 'Create a New Category', new_category_path %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= render partial: 'navbar' %>
+    <header>
+      <h1>Create a new job at <%= @company.name %> here!</h1>
+    </header>
+    <br/>
+    <%= render partial: "form" %>
+    <br/>
+    <%= link_to 'Create a New Category', new_category_path %>
+  </body>
+</html>

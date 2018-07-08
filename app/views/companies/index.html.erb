@@ -1,11 +1,23 @@
-<h3>All Companies</h3>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= render partial: 'navbar' %>
+    <header>
+      <h1>All Companies</h1>
+    </header>
 
-<ul>
-  <% @companies.each do |company| %>
-  <li class=company_<%= company.id %>>
-    <%= link_to company.name, company_path(company) %>: 
-    <%= link_to "Edit", edit_company_path(company) %>
-    <%= link_to "Delete", company_path(company), method: "delete" %>
-  </li>
-  <% end %>
-</ul>
+    <ul>
+      <% @companies.each do |company| %>
+      <li class=company_<%= company.id %>>
+        <%= link_to company.name, company_path(company) %>:
+        <%= link_to "Edit", edit_company_path(company) %>
+        <%= link_to "Delete", company_path(company), method: "delete" %>
+      </li>
+      <% end %>
+    </ul>
+  </body>
+</html>
