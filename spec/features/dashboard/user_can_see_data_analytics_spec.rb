@@ -21,7 +21,7 @@ describe 'features' do
       expect(page).to have_content("1 star(s): 2 job(s)")
       expect(page).to_not have_content("5 star(s)")
     end
-    xit 'can see the top 3 companies ranked by average level of interest' do
+    it 'can see the top 3 companies ranked by average level of interest' do
       company1 = Company.create!(name: "ESPN")
       category = Category.create!(title: "sports")
       company1.jobs.create!(title: "Developer", level_of_interest: 1, city: "Denver", category_id: category.id)
