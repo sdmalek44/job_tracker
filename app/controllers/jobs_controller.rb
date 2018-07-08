@@ -48,8 +48,12 @@ class JobsController < ApplicationController
   end
 
   def all_jobs
-    if params[:sort]
-      @jobs = Job.where(city: params[:sort].titleize)
+    if params[:sort] == "interest"
+      @jobs = Job.order(level_of_interest: :desc)
+    elsif params[:sort]
+      @jobs = Job.order(:city)
+    elsif params[:location]
+      @jobs = Job.where(city: params[:location].titleize)
     else
       @jobs = Job.all
     end
