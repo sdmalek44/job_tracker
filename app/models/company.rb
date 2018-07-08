@@ -4,10 +4,10 @@ class Company < ApplicationRecord
   has_many :contacts
 
   def self.top_three_by_average_interest
-    select("jobs.*, AVG(level_of_interest) AS avg_level_of_interest")
+    select('companies.*, avg(jobs.level_of_interest) AS avg_level_of_interest')
     .joins(:jobs)
     .group(:company_id, :id)
-    .order("avg_level_of_interest DESC")
+    .order('avg(jobs.level_of_interest) desc')
     .limit(3)
   end
 end
