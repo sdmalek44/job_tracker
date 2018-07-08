@@ -15,11 +15,11 @@ describe 'features' do
 
       visit dashboard_path
 
-      expect(page).to have_content("5 stars: 0 job(s)")
-      expect(page).to have_content("4 stars: 3 job(s)")
-      expect(page).to have_content("3 stars: 1 job(s)")
-      expect(page).to have_content("2 stars: 1 jobs(s)")
-      expect(page).to have_content("1 star: 2 jobs(s)")
+      expect(page).to have_content("4 star(s): 3 job(s)")
+      expect(page).to have_content("3 star(s): 1 job(s)")
+      expect(page).to have_content("2 star(s): 1 job(s)")
+      expect(page).to have_content("1 star(s): 2 job(s)")
+      expect(page).to_not have_content("5 star(s)")
     end
   end
 end

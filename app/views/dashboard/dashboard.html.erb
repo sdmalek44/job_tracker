@@ -5,6 +5,10 @@
     <title></title>
   </head>
   <body>
-    <p>hello world</p>
+    <article class="">
+      <% @interest_levels.each do |stars, jobs| %>
+        <p><%= "#{stars} star(s): #{jobs} job(s)" %></p>
+      <% end %>
+    </article>
   </body>
 </html>

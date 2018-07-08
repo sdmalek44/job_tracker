@@ -10,5 +10,6 @@ describe Job, type: :model do
   describe 'relationships' do
     it{should belong_to(:company)}
     it{should belong_to(:category)}
+    it{should have_many(:comments)}
   end
 end
