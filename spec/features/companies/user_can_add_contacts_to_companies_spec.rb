@@ -12,7 +12,6 @@ describe 'features' do
       fill_in "contact[email]", with: "cbishop@doctor.com"
       click_on "Create Contact"
 
-      save_and_open_page
       expect(current_path).to eq(company_path(company))
       expect(page).to have_content("Chris Bishop")
       expect(page).to have_content("Doctor")
