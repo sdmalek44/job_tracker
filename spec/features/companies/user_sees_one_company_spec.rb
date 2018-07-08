@@ -8,7 +8,7 @@ describe "User sees one company" do
 
     visit company_path(company)
 
-    expect(current_path).to eq("/companies/#{company.id}/jobs")
+    expect(current_path).to eq(company_path(1))
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
   end
@@ -18,7 +18,7 @@ describe "User sees one company" do
     contact_1 = company.contacts.create!(name: 'Billy Bob', position: 'hiring manager', email: '@penelope.wooo.com')
     contact_2 = company.contacts.create!(name: 'Johnny Smith', position: 'janitor', email: '@johnny_s.wooo.com')
 
-    visit company_page(company)
+    visit company_path(company)
 
     expect(page).to have_content(contact_1.name)
     expect(page).to have_content(contact_1.position)
@@ -26,5 +26,5 @@ describe "User sees one company" do
     expect(page).to have_content(contact_2.name)
     expect(page).to have_content(contact_2.position)
     expect(page).to have_content(contact_2.email)
-  end  
+  end
 end

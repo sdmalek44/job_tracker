@@ -1,5 +1,23 @@
-All Jobs for <strong><%= @company.name %></strong>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    All Jobs for <strong><%= @company.name %></strong>
 
-<% @company.jobs.each do |job| %>
-  <ul><%= job.title %></ul>
-<% end %>
+    <% @company.jobs.each do |job| %>
+      <ul><%= job.title %></ul>
+    <% end %>
+
+    <% @contacts.each do |contact| %>
+      <h4><%= contact.name %></h4>
+      <ul>
+        <li><%= contact.position %></li>
+        <li><%= contact.email %></li>
+      </ul>
+    <% end %>
+    <%= render partial: 'contacts/form' %>
+  </body>
+</html>

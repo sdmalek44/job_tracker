@@ -1,20 +1,22 @@
-# require 'rails_helper'
-#
-# describe 'features' do
-#   describe 'when visiting /companies/#' do
-#     it 'can create a contact for a company' do
-#       company = Company.create!(name: 'ESPN')
-#       company.contacts.create!(name: 'Billy Bob', position: 'hiring manager', email: '@penelope.wooo.com')
-#
-#       visit company_path(company)
-#
-#       fill_in "contact[name]", with: ""
-#       fill_in "contact[position]", with: "this job is terrible"
-#       click_on "Create Contact"
-#
-#       expect(current_path).to eq(company_job_path(company, job))
-#       expect(page).to have_content("joe shmo")
-#       expect(page).to have_content("this job is terrible")
-#     end
-#   end
-# end
+require 'rails_helper'
+
+describe 'features' do
+  describe 'when visiting /companies/#' do
+    it 'can create a contact for a company' do
+      company = Company.create!(name: 'ESPN')
+
+      visit company_path(company)
+
+      fill_in "contact[name]", with: "Chris Bishop"
+      fill_in "contact[position]", with: "Doctor"
+      fill_in "contact[email]", with: "cbishop@doctor.com"
+      click_on "Create Contact"
+
+      save_and_open_page
+      expect(current_path).to eq(company_path(company))
+      expect(page).to have_content("Chris Bishop")
+      expect(page).to have_content("Doctor")
+      expect(page).to have_content("cbishop@doctor.com")
+    end
+  end
+end
