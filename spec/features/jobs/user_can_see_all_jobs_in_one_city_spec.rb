@@ -30,10 +30,31 @@ describe 'features' do
 
       visit jobs_path(sort: 'location')
 
+      expect(page).to have_content(job_1.title)
+      expect(page).to have_content(job_2.title)
+      expect(page).to have_content(job_3.title)
+      
       job_1.title.should appear_before(job_3.title)
       job_3.title.should appear_before(job_2.title)
       job_2.title.should appear_after(job_3.title)
     end
+    it 'user sees jobs ordered by level of interest' do
+      company = Company.create!(name: "ESPN")
+      category = Category.create!(title: "sports")
+      job_1 = company.jobs.create!(title: "Developer", level_of_interest: 1, city: "Atlanta", category_id: category.id)
+      job_2 = company.jobs.create!(title: "Progammer", level_of_interest: 2, city: "Denver", category_id: category.id)
+      job_3 = company.jobs.create!(title: "Janitor", level_of_interest: 3, city: "Chicago", category_id: category.id)
 
+      visit jobs_path(sort: 'interest')
+
+
+      expect(page).to have_content(job_1.title)
+      expect(page).to have_content(job_2.title)
+      expect(page).to have_content(job_3.title)
+
+      job_3.title.should appear_before(job_2.title)
+      job_2.title.should appear_before(job_1.title)
+      job_1.title.should appear_after(job_2.title)
+    end
   end
 end
