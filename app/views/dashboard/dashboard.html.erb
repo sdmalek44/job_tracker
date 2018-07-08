@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <article class="">
+      <% @interest_levels.each do |stars, jobs| %>
+        <p><%= "#{stars} star(s): #{jobs} job(s)" %></p>
+      <% end %>
+    </article>
+    <article class="">
+      <% @top_3_companies.each do |comp| %>
+      <p><%= comp %></p>
+      <% end %>
+    </article>
+  </body>
+</html>
