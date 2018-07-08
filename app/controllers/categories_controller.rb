@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if Category.exists?(title: @category.title)
-      flash.notice = "'#{@category.title}' category already exists"
+      flash.notice = "Sorry, the #{@category.title} category already exists"
       redirect_to new_category_path
     else
       @category.save

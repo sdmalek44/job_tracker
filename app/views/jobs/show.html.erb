@@ -7,24 +7,18 @@
   <body>
     <%= render partial: 'navbar' %>
     <header>
-
+      <p>Title: <%= @job.title %></p>
     </header>
-    Title: <%= @job.title %>
-    <br>
 
-    Description: <%= @job.description %>
-    <br>
+    <p>Description: <%= @job.description %></p>
 
-    Level of Interest: <%= @job.level_of_interest %>
-    <br>
+    <p>Level of Interest: <%= @job.level_of_interest %></p>
 
-    City: <%= @job.city %>
-    <br>
+    <p>City: <%= @job.city %></p>
 
-    Company: <%= link_to @job.company.name, company_path(@job.company) %>
-    <br/>
+    <p>Company: <%= link_to @job.company.name, company_path(@job.company) %></p>
 
-    Category: <%= link_to @job.category.title, category_path(@job.category) %>
+    <p>Category: <%= link_to @job.category.title, category_path(@job.category) %></p>
     <br/>
     <%= link_to "Edit", edit_company_job_path(@job.company, @job) %>
     <%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
