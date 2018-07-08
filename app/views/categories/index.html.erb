@@ -6,6 +6,10 @@
   </head>
   <%= link_to 'Create New Category', new_category_path %>
   <body>
+    <%= render partial: 'navbar' %>
+    <header>
+
+    </header>
     <% @categories.each do |category| %>
       <p><%= link_to category.title, category_path(category) %></p>
       <%= link_to 'Edit', edit_category_path(category) %>

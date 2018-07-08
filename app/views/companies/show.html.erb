@@ -5,7 +5,10 @@
     <title></title>
   </head>
   <body>
-    All Jobs for <strong><%= @company.name %></strong>
+    <%= render partial: 'navbar' %>
+    <header>
+      <h1>All Jobs for <strong><%= @company.name %></strong></h1>
+    </header>
 
     <% @company.jobs.each do |job| %>
       <ul><%= job.title %></ul>

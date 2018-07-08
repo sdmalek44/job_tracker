@@ -1,7 +1,18 @@
-All Jobs for <strong><%= @company.name %></strong>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= render partial: 'navbar' %>
+    <header>
+      <h1>All Jobs for <strong><%= @company.name %></strong></h1>
+    </header>
+    <% @jobs.each do |job| %>
+      <ul><%= link_to job.title, company_job_path(@company, job) %> at <%= job.company.name %> <%= job.id %></ul>
+    <% end %>
 
-<% @jobs.each do |job| %>
-  <ul><%= link_to job.title, company_job_path(@company, job) %> at <%= job.company.name %> <%= job.id %></ul>
-<% end %>
-
-<%= link_to '<< Back to Companies', companies_path %>
+    <%= link_to '<< Back to Companies', companies_path %>
+  </body>
+</html>

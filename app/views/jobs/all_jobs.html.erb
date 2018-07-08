@@ -5,6 +5,10 @@
     <title></title>
   </head>
   <body>
+    <%= render partial: 'navbar' %>
+    <header>
+
+    </header>
     <% @jobs.each do |job| %>
       <p><%= link_to job.title, company_job_path(job.company, job) %></p>
       <p>Level of Interest: <%= job.level_of_interest %></p>
