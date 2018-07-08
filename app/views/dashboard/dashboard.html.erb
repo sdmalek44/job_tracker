@@ -10,5 +10,10 @@
         <p><%= "#{stars} star(s): #{jobs} job(s)" %></p>
       <% end %>
     </article>
+    <article class="">
+      <% @top_3_companies.each do |comp| %>
+      <p><%= comp %></p>
+      <% end %>
+    </article>
   </body>
 </html>
