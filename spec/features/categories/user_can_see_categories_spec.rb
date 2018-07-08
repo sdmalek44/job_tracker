@@ -15,7 +15,7 @@ describe 'feature' do
     it 'user can create a new category' do
       visit categories_path
 
-      click_on "Create New Category"
+      click_on "Add New Category"
 
       expect(current_path).to eq(new_category_path)
     end
