@@ -15,12 +15,13 @@ describe 'features' do
 
       visit dashboard_path
 
-      expect(page).to have_content("4 star(s): 3 job(s)")
-      expect(page).to have_content("3 star(s): 1 job(s)")
-      expect(page).to have_content("2 star(s): 1 job(s)")
-      expect(page).to have_content("1 star(s): 2 job(s)")
-      expect(page).to_not have_content("5 star(s)")
+      expect(page).to have_content("**** (3 jobs)")
+      expect(page).to have_content("*** (1 jobs)")
+      expect(page).to have_content("** (1 jobs)")
+      expect(page).to have_content("* (2 jobs)")
+      expect(page).to_not have_content("*****")
     end
+    
     it 'can see the top 3 companies ranked by average level of interest' do
       company1 = Company.create!(name: "ESPN")
       category = Category.create!(title: "sports")

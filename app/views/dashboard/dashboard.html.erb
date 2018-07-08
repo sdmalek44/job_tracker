@@ -9,19 +9,23 @@
     <header>
 
     </header>
-    <article class="">
+    <h3>Jobs by Interest</h3>
+    <article class="jobs-by-interest">
       <% @interest_levels.each do |stars, jobs| %>
-        <p><%= "#{stars} star(s): #{jobs} job(s)" %></p>
+        <div><%= '*' * stars %><%= " (#{jobs} jobs)" %></div>
+        <br/>
       <% end %>
     </article>
     <article class="">
+      <h3>Top Companies by Interest</h3>
       <% @top_3_companies.each do |company| %>
         <p><%= company.name %> (<%= company.avg_level_of_interest.round(1) %> stars)</p>
       <% end %>
     </article>
     <article class="">
+      <h3>Jobs by Location</h3>
       <% @jobs_by_city.each do |city, jobs| %>
-        <li><%= link_to city, jobs_path(location: city) %> jobs (<%= jobs %> jobs)</li>
+        <li><%= link_to "#{city} jobs", jobs_path(location: city) %> (<%= jobs %> jobs)</li>
       <% end %>
     </article>
   </body>
