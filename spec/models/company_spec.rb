@@ -46,7 +46,7 @@ describe Company do
       company4.jobs.create!(title: "Manager", level_of_interest: 1, city: "Denver", category_id: category.id)
       company4.jobs.create!(title: "Fireman", level_of_interest: 1, city: "Denver", category_id: category.id)
 
-      expect(Company.top_three_by_average_interest)
+      expect(Company.top_three_by_average_interest).to eq([company3, company2, company1])
     end
   end
 end
