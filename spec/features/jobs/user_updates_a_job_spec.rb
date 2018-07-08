@@ -23,14 +23,14 @@ describe 'features' do
 
         fill_in 'job[title]', with: 'Janitor'
         fill_in 'job[description]', with: 'Cleaning'
-        fill_in 'job[level_of_interest]', with: 67
+        select 1, from: 'job[level_of_interest]'
         fill_in 'job[city]', with: 'San Diego'
         click_on 'Update Job'
 
         expect(current_path).to eq(company_job_path(company, job))
         expect(page).to have_content('Title: Janitor')
         expect(page).to have_content('Description: Cleaning')
-        expect(page).to have_content("Level of Interest: 67")
+        expect(page).to have_content("Level of Interest: 1")
         expect(page).to have_content("City: San Diego")
       end
     end
