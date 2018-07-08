@@ -20,3 +20,7 @@
 .main {
   width: 80%;
 }
+
+.colored {
+  background-color: rgba(230,233,237,1.0)
+}
