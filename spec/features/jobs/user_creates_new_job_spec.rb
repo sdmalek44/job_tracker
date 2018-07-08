@@ -26,7 +26,7 @@ describe "User visits /companies/#/jobs/new" do
     category = Category.create!(title: "sports")
     visit new_company_job_path(company)
 
-    click_on 'Create a New Category'
+    click_on 'add new category'
 
     expect(current_path).to eq(new_category_path)
   end

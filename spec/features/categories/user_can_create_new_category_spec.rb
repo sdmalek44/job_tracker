@@ -5,7 +5,7 @@ describe 'features' do
     it 'user can create a new category' do
       visit categories_path
 
-      click_on 'Create New Category'
+      click_on 'Add New Category'
 
       fill_in "category[title]", with: 'poop scoopery'
       click_on "Create Category"
@@ -23,7 +23,7 @@ describe 'features' do
       click_on "Create Category"
 
       expect(current_path).to eq(new_category_path)
-      expect(page).to have_content("'#{category.title}' category already exists")
+      expect(page).to have_content("Sorry, the medicine category already exists")
     end
   end
 end
