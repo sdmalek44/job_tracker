@@ -1,6 +1,12 @@
 <%= form_for @category do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.submit %>
+  <div>
+    <%= f.label 'Name:' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+  <div>
+    <%= link_to 'Cancel', categories_path %>
+  </div>
 <% end %>

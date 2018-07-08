@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <%= link_to 'Create New Category', new_category_path %>
   <body>
     <%= render partial: 'navbar' %>
     <header>
-
+      <h1>Job Categories</h1>
     </header>
+    <div><%= link_to 'Add New Category', new_category_path %></div>
+    <br/>
     <% @categories.each do |category| %>
-      <p><%= link_to category.title, category_path(category) %></p>
+      <p><%= "#{category.title}: " %><%= link_to "#{category.jobs.count} jobs", category_path(category) %></p>
       <%= link_to 'Edit', edit_category_path(category) %>
       <%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: "Really want to delete this category?"}%>
     <% end %>

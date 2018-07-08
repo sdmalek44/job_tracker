@@ -7,9 +7,9 @@
   <body>
     <%= render partial: 'navbar' %>
     <header>
-      <h1>All Companies</h1>
+      <h1>Companies</h1>
     </header>
-
+    <p><%= link_to 'Add a New Company', new_company_path %></p>
     <ul>
       <% @companies.each do |company| %>
       <li class=company_<%= company.id %>>

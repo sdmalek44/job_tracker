@@ -7,13 +7,12 @@
   <body>
     <%= render partial: 'navbar' %>
     <header>
-
+      <h1>Jobs</h1>
     </header>
     <% @jobs.each do |job| %>
-      <p><%= link_to job.title, company_job_path(job.company, job) %></p>
+      <p><%= link_to "#{job.title} at #{job.company.name}", company_job_path(job.company, job) %></p>
       <p>Level of Interest: <%= job.level_of_interest %></p>
-      <p>City: <%= job.city %></p>
-      <p><%= job.company.name %></p>
+      <p>Location: <%= job.city %></p>
     <% end %>
   </body>
 </html>

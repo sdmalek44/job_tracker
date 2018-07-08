@@ -7,20 +7,23 @@
   <body>
     <%= render partial: 'navbar' %>
     <header>
-      <h1>All Jobs for <strong><%= @company.name %></strong></h1>
+      <h1><%= @company.name %></h1>
+      <%= link_to 'Edit', edit_company_path(@company) %>
+      <%= link_to "Delete", company_path(@company), method: :delete, data: {confirm: "Really want to delete this company?"} %>
     </header>
-
+    <h3>Jobs</h3>
     <% @company.jobs.each do |job| %>
-      <ul><%= job.title %></ul>
+      <ul><%= link_to job.title, company_job_path(@company, job) %></ul>
     <% end %>
-
+    <h3>Existing Contacts</h3>
     <% @contacts.each do |contact| %>
-      <h4><%= contact.name %></h4>
+      <h5><%= contact.name %></h5>
       <ul>
-        <li><%= contact.position %></li>
-        <li><%= contact.email %></li>
+        <li>Position: <%= contact.position %></li>
+        <li>Email: <%= contact.email %></li>
       </ul>
     <% end %>
+    <h4>Create New Contact for <%= @company.name %></h4>
     <%= render partial: 'contacts/form' %>
   </body>
 </html>
