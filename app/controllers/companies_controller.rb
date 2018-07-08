@@ -13,7 +13,8 @@ class CompaniesController < ApplicationController
       flash[:success] = "#{@company.name} added!"
       redirect_to company_path(@company)
     else
-      render :new
+      flash.notice = "Please enter a name for your company"
+      redirect_to new_company_path
     end
   end
 
@@ -34,7 +35,8 @@ class CompaniesController < ApplicationController
       flash[:success] = "#{@company.name} updated!"
       redirect_to company_path(@company)
     else
-      render :edit
+      flash.notice = "Please enter a new name for your company"
+      redirect_to edit_company_path(@company)
     end
   end
 

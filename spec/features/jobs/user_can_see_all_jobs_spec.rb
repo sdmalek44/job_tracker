@@ -10,7 +10,6 @@ describe 'features' do
       job2 = company1.jobs.create!(title: 'guy', level_of_interest: 10, city: 'Denver', category_id: category.id)
       job3 = company2.jobs.create!(title: 'dude', level_of_interest: 10, city: 'Denver', category_id: category.id)
 
-
       visit jobs_path
 
       expect(page).to have_content(job1.title)

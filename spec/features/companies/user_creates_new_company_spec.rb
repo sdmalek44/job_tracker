@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "User creates a new company" do
-  scenario "a user can create a new company" do
+  it "a user can create a new company" do
     visit new_company_path
 
     fill_in "company[name]", with: "ESPN"
@@ -9,6 +9,14 @@ describe "User creates a new company" do
 
     expect(current_path).to eq(company_path(1))
     expect(page).to have_content("ESPN")
-    expect(Company.count).to eq(1)
+  end
+
+  it "a user cannot create a company without entering a name" do
+    visit new_company_path
+
+    click_button "Create"
+
+    expect(current_path).to eq(new_company_path)
+    expect(page).to have_content("Please enter a name for your company")
   end
 end
