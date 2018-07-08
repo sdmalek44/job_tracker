@@ -15,5 +15,10 @@
       <p><%= comp %></p>
       <% end %>
     </article>
+    <article class="">
+      <% @jobs_by_city.each do |city, jobs| %>
+        <li><%= link_to city, jobs_path(location: city) %> jobs (<%= jobs %> jobs)</li> 
+      <% end %>
+    </article>
   </body>
 </html>
