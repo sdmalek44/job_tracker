@@ -3,7 +3,6 @@ class JobsController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
     @jobs = @company.jobs
-    # binding.pry
   end
 
   def new
@@ -18,7 +17,8 @@ class JobsController < ApplicationController
       flash[:success] = "You created #{@job.title} at #{@company.name}"
       redirect_to company_job_path(@company, @job)
     else
-      render :new
+      flash.notice = "Please pass in all required fields"
+      redirect_to new_company_job_path(@company)
     end
   end
 

@@ -2,31 +2,24 @@ require 'rails_helper'
 
 describe Company do
   describe "validations" do
-    context "invalid attributes" do
-      it "is invalid without a name" do
-        company = Company.new()
-        expect(company).to be_invalid
-      end
-
-      it "has a unique name" do
-        Company.create(name: "Dropbox")
-        company = Company.new(name: "Dropbox")
-        expect(company).to be_invalid
-      end
-    end
-
-    context "valid attributes" do
-      it "is valid with a name" do
-        company = Company.new(name: "Dropbox")
-        expect(company).to be_valid
-      end
-    end
+    it {should validate_presence_of :name}
+    it {should validate_uniqueness_of :name}
   end
 
   describe "relationships" do
-    it "has many jobs" do
-      company = Company.new(name: "Dropbox")
-      expect(company).to respond_to(:jobs)
+    it {should have_many :jobs}
+    it {should have_many :contacts}
+    it 'should destroy jobs associated with company when company destroyed' do
+      company = Company.create!(name: "ESPN")
+      category = Category.create!(title: "sports")
+      company.jobs.create!(title: "Developer", level_of_interest: 1, city: "Denver", category_id: category.id)
+      company.jobs.create!(title: "Janitor", level_of_interest: 3, city: "Denver", category_id: category.id)
+
+      expect(Job.count).to eq(2)
+
+      company.destroy
+
+      expect(Job.count).to eq(0)
     end
   end
 
