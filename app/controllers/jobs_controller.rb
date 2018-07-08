@@ -1,7 +1,9 @@
 class JobsController < ApplicationController
+
   def index
     @company = Company.find(params[:company_id])
     @jobs = @company.jobs
+    # binding.pry
   end
 
   def new
@@ -43,6 +45,15 @@ class JobsController < ApplicationController
     @job.destroy
 
     redirect_to company_jobs_path(@job.company)
+  end
+
+  def all_jobs
+    if params[:sort]
+      @jobs = Job.where(city: params[:sort].titleize)
+    else
+      @jobs = Job.all
+    end
+    render :all_jobs
   end
 
   private
