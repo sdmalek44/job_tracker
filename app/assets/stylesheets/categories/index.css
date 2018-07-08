@@ -1,0 +1,22 @@
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color: rgba(230,233,237,1.0)
+}
+
+.give-border {
+  border: 1px solid red;
+}
+.whole {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.main {
+  width: 80%;
+}
