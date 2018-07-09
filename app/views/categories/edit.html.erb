@@ -5,9 +5,11 @@
     <title></title>
   </head>
   <body>
-    <header>
-
+    <header class='header'>
+      <div>Edit <%= @category.title %> Category</div>
     </header>
-    <%= render partial: 'form' %>
+    <section class='edit-category-main'>
+      <div><%= render partial: 'form' %></div>
+    </section>
   </body>
 </html>

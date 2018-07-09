@@ -1,12 +1,11 @@
-<%= form_for @category do |f| %>
-  <div>
-    <%= f.label 'Name:' %>
-    <%= f.text_field :title %>
+<form action="<%= categories_path %>" method='get' >
+  <div class="form-row align-items-center">
+    <div>
+      <label class="sr-only" for="inlineFormInputName" value='category[title]'>Name</label>
+      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Name">
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
   </div>
-  <div>
-    <%= f.submit %>
-  </div>
-  <div>
-    <%= link_to 'Cancel', categories_path %>
-  </div>
-<% end %>
+</form>

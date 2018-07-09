@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
+    @category = set_category
   end
 
   def update

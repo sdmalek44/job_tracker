@@ -1,0 +1,13 @@
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color: rgba(230,233,237,1.0);
+  margin-bottom: 15px;
+}
+
+.category-show-main {
+  width: 60%;
+}
