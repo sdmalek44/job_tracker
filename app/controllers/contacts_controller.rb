@@ -6,6 +6,13 @@ class ContactsController < ApplicationController
     redirect_to company_path(params[:company_id])
   end
 
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+
+    redirect_to company_path(params[:company_id])
+  end
+
   private
 
   def contact_params
