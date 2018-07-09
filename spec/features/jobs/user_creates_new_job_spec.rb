@@ -12,7 +12,7 @@ describe "User visits /companies/#/jobs/new" do
     select 1, from: "job[level_of_interest]"
     fill_in "job[city]", with: "Denver"
 
-    click_button "Create"
+    click_button "Create Job"
 
     expect(current_path).to eq("/companies/#{company.id}/jobs/#{Job.last.id}")
     expect(page).to have_content("ESPN")
