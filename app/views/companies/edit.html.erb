@@ -5,9 +5,13 @@
     <title></title>
   </head>
   <body>
-    <header>
+    <header class='header'>
       <h2>Edit <%= @company.name %></h2>
     </header>
-    <%= render partial: "form" %>
+    <section class='new-company-main'>
+      <div class= 'new-company-form'>
+        <%= render partial: "form" %>
+      </div>
+    </section>
   </body>
 </html>
