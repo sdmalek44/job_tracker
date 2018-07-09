@@ -5,18 +5,30 @@
     <title></title>
   </head>
   <body>
-    <header>
-      <h1>Companies</h1>
+    <header class="header">
+      <div>Companies</div>
     </header>
-    <p><%= link_to 'Add a New Company', new_company_path %></p>
-    <ul>
-      <% @companies.each do |company| %>
-      <li>
-        <%= link_to company.name, company_path(company) %>:
-        <%= link_to "Edit", edit_company_path(company) %>
-        <%= link_to "Delete", company_path(company), method: "delete" %>
-      </li>
-      <% end %>
-    </ul>
+    <section class="whole">
+      <article class="main">
+        <table class="table table-striped container-fluid">
+          <thead>
+            <tr class="table-primary">
+              <th style="width: 50%">Company</th>
+              <th style="width: 10%"></th>
+              <th style="width: 40%"><%= link_to 'Add a New Company', new_company_path %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @companies.each_with_index do |company, index| %>
+            <tr>
+              <td style="width: 60%"><%= link_to "#{company.name}", company_path(company) %></td>
+              <td style="width: 10%"><%= link_to "Edit", edit_company_path(company) %></td>
+              <td style="width: 30%" align='center'><%= link_to "Delete", company_path(company), method: "delete" %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </article>
+    </section>
   </body>
 </html>

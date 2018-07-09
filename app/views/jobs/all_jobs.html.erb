@@ -5,13 +5,33 @@
     <title></title>
   </head>
   <body>
-    <header>
-      <h1>Jobs</h1>
+    <header class="header">
+      <div>All Jobs</div>
     </header>
-    <% @jobs.each do |job| %>
-      <p><%= link_to "#{job.title} at #{job.company.name}", company_job_path(job.company, job) %></p>
-      <p>Level of Interest: <%= job.level_of_interest %></p>
-      <p>Location: <%= job.city %></p>
-    <% end %>
+    <section class="whole">
+      <article class="main">
+        <table class="table table-striped container-fluid">
+          <thead>
+            <tr class="table-primary">
+              <th style="width: 40%">Jobs</th>
+              <th style="width: 20%">Level of Interest</th>
+              <th style="width: 20%">Location</th>
+              <th style="width: 20%"><%= link_to 'Add a New Company', new_company_path %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @jobs.each_with_index do |job, index| %>
+            <tr>
+              <td style="width: 40%"><%= link_to "#{job.title} at #{job.company.name}", company_job_path(job.company, job) %></td>
+              <td style="width: 20%"><%= job.level_of_interest %></td>
+              <td style="width: 20%"><%= job.city %></td>
+              <td style="width: 20%"></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="colored"><%= link_to '<< Back to Companies', companies_path %><div>
+      </article>
+    </section>
   </body>
 </html>
