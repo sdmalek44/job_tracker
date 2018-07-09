@@ -13,17 +13,17 @@
         <table class="table table-striped container-fluid">
           <thead>
             <tr class="table-primary">
-              <th style="width: 50%">Company</th>
-              <th style="width: 10%"></th>
-              <th style="width: 40%"><%= link_to 'Add a New Company', new_company_path %></th>
+              <th style="width: 80%">Company</th>
+              <th style="width: 5%"></th>
+              <th style="width: 15%"><%= link_to 'Add a New Company', new_company_path %></th>
             </tr>
           </thead>
           <tbody>
             <% @companies.each_with_index do |company, index| %>
             <tr>
-              <td style="width: 60%"><%= link_to "#{company.name}", company_path(company) %></td>
-              <td style="width: 10%"><%= link_to "Edit", edit_company_path(company) %></td>
-              <td style="width: 30%" align='center'><%= link_to "Delete", company_path(company), method: "delete" %></td>
+              <td style="width: 80%"><%= link_to "#{company.name}", company_path(company) %></td>
+              <td style="width: 5%"><%= link_to "Edit", edit_company_path(company) %></td>
+              <td style="width: 15%" align='center'><%= link_to "Delete", company_path(company), method: "delete" %></td>
             </tr>
             <% end %>
           </tbody>

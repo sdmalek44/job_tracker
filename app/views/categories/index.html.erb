@@ -13,17 +13,19 @@
         <table class="table table-striped container-fluid">
           <thead>
             <tr class="table-primary">
-              <th style="width: 50%">Category</th>
-              <th style="width: 10%"></th>
-              <th style="width: 40%"><%= link_to 'Add New Category', new_category_path %></th>
+              <th style="width: 40%">Category</th>
+              <th style="width: 40%">Job Count</th>
+              <th style="width: 5%"></th>
+              <th style="width: 15%"><%= link_to 'Add New Category', new_category_path %></th>
             </tr>
           </thead>
           <tbody>
             <% @categories.each_with_index do |category, index| %>
             <tr>
-              <td style="width: 60%"><%= "#{category.title}: " %><%= link_to "#{category.jobs.count} jobs", category_path(category) %></td>
-              <td style="width: 10%"><%= link_to 'Edit', edit_category_path(category) %></td>
-              <td style="width: 30%" align='center'><%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: "Really want to delete this category?"}%></td>
+              <td style="width: 40%"><%= "#{category.title}" %></td>
+              <td style="width: 40%"><%= link_to "#{category.jobs.count} jobs", category_path(category) %></td>
+              <td style="width: 5%"><%= link_to 'Edit', edit_category_path(category) %></td>
+              <td style="width: 15%" align='center'><%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: "Really want to delete this category?"}%></td>
             </tr>
             <% end %>
           </tbody>

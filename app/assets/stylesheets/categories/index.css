@@ -1,3 +1,4 @@
+
 .header {
   height: 100px;
   display: flex;
@@ -17,5 +18,5 @@
   margin-top: 40px;
 }
 .main {
-  width: 80%;
+  width: 65%;
 }
