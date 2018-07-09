@@ -5,24 +5,42 @@
     <title></title>
   </head>
   <body>
-    <header>
+    <header class='company-show-header'>
       <h1><%= @company.name %></h1>
-      <%= link_to 'Edit', edit_company_path(@company) %>
-      <%= link_to "Delete", company_path(@company), method: :delete, data: {confirm: "Really want to delete this company?"} %>
     </header>
-    <h3>Jobs</h3>
-    <% @company.jobs.each do |job| %>
-      <ul><%= link_to job.title, company_job_path(@company, job) %></ul>
-    <% end %>
-    <h3>Existing Contacts</h3>
-    <% @contacts.each do |contact| %>
-      <h5><%= contact.name %></h5>
-      <ul>
-        <li>Position: <%= contact.position %></li>
-        <li>Email: <%= contact.email %></li>
-      </ul>
-    <% end %>
-    <h4>Create New Contact for <%= @company.name %></h4>
-    <%= render partial: 'contacts/form' %>
+    <section class='subheader'>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" id='delete-button'>Delete</button>
+        <button type="button" class="btn btn-secondary">Edit</button>
+      </div>
+    </section>
+    <section class='job-show-main'>
+      <div class='container'>
+        <div class='row'></div>
+        <div class='row'>
+          <div class='col-sm' align='center'>
+            <h3><%= link_to "Jobs for #{@company.name}", company_jobs_path(@company) %></h3>
+            <h3 align='center'>Existing Contacts</h3>
+            <div class='contacts'>
+              <% @contacts.each do |contact| %>
+                <div class='individual-contacts'>
+                  <h5 align='left'><%= contact.name %></h5>
+                  <ul>
+                    <li align='left'>Position: <%= contact.position %></li>
+                    <li align='left'>Email: <%= contact.email %></li>
+                  </ul>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class='row'></div>
+          <div class='col-sm' align='center' id='new-contact-form'>
+            <h4 align='left'>Create New Contact for <%= @company.name %></h4>
+            <div align='left'><%= render partial: 'contacts/form' %></div>
+          </div>
+          <div class='row'></div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

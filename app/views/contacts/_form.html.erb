@@ -1,14 +1,14 @@
 <%= form_for [@company, @contact] do |f| %>
   <div class="">
-    <%= f.label :name, "Full Name" %>
+    <%= f.label :name, 'Name: ' %>
     <%= f.text_field :name %>
   </div>
   <div class="">
-    <%= f.label :position %>
+    <%= f.label 'Position: ' %>
     <%= f.text_field :position %>
   </div>
   <div class="">
-        <%= f.label :email, "Email Address" %>
+        <%= f.label :email, "Email Address: " %>
         <%= f.text_field :email %>
   </div>
   <div class="">
