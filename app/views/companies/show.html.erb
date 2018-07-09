@@ -27,7 +27,7 @@
                   <h5 align='left'><%= contact.name %></h5>
                   <ul>
                     <li align='left'>Position: <%= contact.position %></li>
-                    <li align='left'>Email: <%= contact.email %></li>
+                    <li id='contact-email' align='left'>Email: <%= contact.email %></li>
                   </ul>
                   <%= link_to "Delete Contact", company_contact_path(contact.company, contact), method: 'delete' %>
                 </div>
