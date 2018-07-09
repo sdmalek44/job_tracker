@@ -8,6 +8,12 @@
     <header class="header">
       <div>Job Title: <%= @job.title %></div>
     </header>
+    <section class="butt-on-box">
+      <a class="click-me" href="<%= edit_company_job_path(@job.company, @job) %>">Edit</a>
+      <div class="click-me">
+        <%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
+      </div>
+    </section>
     <div class="space-30"></div>
     <div class="container">
     <div class="row">
@@ -18,15 +24,13 @@
           <p><div class="bolded">City: </div> <%= @job.city %></p>
           <p><div class="bolded">Company: </div> <%= link_to @job.company.name, company_path(@job.company) %></p>
           <p><div class="bolded">Category: </div> <%= link_to @job.category.title, category_path(@job.category) %></p>
-          <div class="">
-            <span><%= link_to "Edit", edit_company_job_path(@job.company, @job) %></span>
-            <span><%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, data: {confirm: "Really want to delete this job?"} %></span>
-          </div>
+
         </article>
       </div>
       <div class="col-2"></div>
       <article class="col-5">
         <div class="colored padded">
+          <h3>Comments Section</h3>
           <%= render partial: 'comment', collection: @job.comments.reverse %>
           <div class="border-t">
             <%= render partial: 'comments/form' %>

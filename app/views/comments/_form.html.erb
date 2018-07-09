@@ -1,13 +1,21 @@
 <%= form_for [@company, @job, @comment] do |f| %>
+  <div class="padded">
+    <div class="bolded">
+      <%= f.label :author, "Your Name" %>
+    </div>
+    <div class="padded">
+      <%= f.text_field :author %>
+    </div>
+  </div>
+  <div class="bolded padded">
+    <div class="bolded">
+      <%= f.label :body, "Your Comment" %>
+    </div>
+    <div class="padded">
+      <%= f.text_area :body %>
+    </div>
+  </div>
   <div>
-    <%= f.label :author, "Your Name" %>
-    <%= f.text_field :author %>
-  </div>
-  <div class="">
-    <%= f.label :body, "Your Comment" %>
-    <%= f.text_area :body %>
-  </div>
-  <div class="">
-    <%= f.submit "Submit Comment" %>
+    <%= f.submit "Submit Comment"%>
   </div>
 <% end %>
