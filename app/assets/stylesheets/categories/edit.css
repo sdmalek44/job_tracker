@@ -8,15 +8,7 @@
   margin-bottom: 15px;
 }
 
-
-.main-new {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.new-category-form {
-  width: 500px;
+.edit-category-main {
   display: flex;
   justify-content: center;
 }

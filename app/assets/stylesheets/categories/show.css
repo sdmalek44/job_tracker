@@ -8,15 +8,6 @@
   margin-bottom: 15px;
 }
 
-
-.main-new {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.new-category-form {
-  width: 500px;
-  display: flex;
-  justify-content: center;
+.category-show-main {
+  width: 60%;
 }
