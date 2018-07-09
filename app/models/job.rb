@@ -2,7 +2,7 @@ class Job < ApplicationRecord
   validates_presence_of :title, :level_of_interest, :city
   belongs_to :company
   belongs_to :category
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
 
   def self.count_levels_of_interest
