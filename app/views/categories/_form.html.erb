@@ -1,11 +1,6 @@
-<form action="<%= categories_path %>" method='get' >
-  <div class="form-row align-items-center">
-    <div>
-      <label class="sr-only" for="inlineFormInputName" value='category[title]'>Name</label>
-      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Category Name">
-    </div>
-    <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
+<%= form_for @category do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.submit %>
+<% end %>
