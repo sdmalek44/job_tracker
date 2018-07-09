@@ -12,8 +12,8 @@ describe 'features' do
       click_on 'Delete'
 
       expect(current_path).to eq(company_jobs_path(company))
-      expect(page).to_not have_content("#{job_1.title} at #{company.name}")
-      expect(page).to have_content("#{job_2.title} at #{company.name}")
+      expect(page).to_not have_content("#{job_1.title}", "#{company.name}")
+      expect(page).to have_content("#{job_2.title}", "#{company.name}")
     end
   end
 end

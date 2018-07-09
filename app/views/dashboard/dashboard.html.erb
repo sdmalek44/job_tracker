@@ -5,27 +5,43 @@
     <title></title>
   </head>
   <body>
-    <header>
-      <h1>JobTracker Dashboard</h1>
+    <header class="header">
+      <div>Job Tracker Dashboard</div>
     </header>
-    <h3>Jobs by Interest</h3>
-    <article class="jobs-by-interest">
-      <% @interest_levels.each do |stars, jobs| %>
-        <div><%= '*' * stars %><%= " (#{jobs} jobs)" %></div>
-        <br/>
-      <% end %>
-    </article>
-    <article class="">
-      <h3>Top Companies by Interest</h3>
-      <% @top_3_companies.each do |company| %>
-        <p><%= company.name %> (<%= company.avg_level_of_interest.round(1) %> stars)</p>
-      <% end %>
-    </article>
-    <article class="">
-      <h3>Jobs by Location</h3>
-      <% @jobs_by_city.each do |city, jobs| %>
-        <li><%= link_to "#{city} jobs", jobs_path(location: city) %> (<%= jobs %> jobs)</li>
-      <% end %>
-    </article>
+      <div class="space-30"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-3 colored padded column-center">
+            <h3>Jobs by Interest</h3>
+            <article class="jobs-by-interest">
+              <% @interest_levels.each do |stars, jobs| %>
+                <div><%= '*' * stars %><%= " (#{jobs} jobs)" %></div>
+                <br/>
+              <% end %>
+            </article>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-3 colored padded column-center">
+            <h3>Top Companies by Interest</h3>
+            <article class="">
+              <% @top_3_companies.each do |company| %>
+                <br>
+                <p><%= company.name %> (<%= company.avg_level_of_interest.round(1) %> stars)</p>
+              <% end %>
+            </article>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+      <div class="space-30"></div>
+      <div class="col flex-center">
+        <article class="middle-width colored padded column-center">
+          <h3>Jobs by Location</h3>
+          <% @jobs_by_city.each do |city, jobs| %>
+            <li><%= link_to "#{city} jobs", jobs_path(location: city) %> (<%= jobs %> jobs)</li>
+          <% end %>
+        </article>
+      </div>
   </body>
 </html>
