@@ -5,10 +5,16 @@
     <title></title>
   </head>
   <body>
-    <header>
+    <header class='header'>
       <h1>Create a new job at <%= @company.name %></h1>
     </header>
     <br/>
-    <%= render partial: "form" %>
+    <div class='new-job-form-main'>
+      <div class='new-job-form'>
+        <div class='new-job-form-box'><%= render partial: "form" %></div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+        </div>
+      </div>
+    </div>
   </body>
 </html>
