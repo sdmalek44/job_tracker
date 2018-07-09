@@ -1,7 +1,7 @@
 <%= form_for [@company, @job] do |f| %>
   <div>
     <%= f.label 'Category: ' %>
-    <%= f.collection_select :category_id, Category.order(:title),:id,:title, include_blank: true %>
+    <%= f.collection_select :category_id, Category.order(:title), :id, :title, include_blank: true %>
     <%= link_to 'add new category', new_category_path %>
   </div>
   <div>
@@ -21,7 +21,6 @@
     <%= f.text_field :city %>
   </div>
   <div class='job-buttons'>
-    <button type="button" class="btn btn-secondary">Cancel</button>
-    <button type="button" class="btn btn-secondary">Update</button>
+    <%= f.submit %>
   </div>
 <% end %>

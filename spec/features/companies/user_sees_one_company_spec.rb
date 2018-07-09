@@ -10,7 +10,6 @@ describe "User sees one company" do
 
     expect(current_path).to eq(company_path(1))
     expect(page).to have_content("ESPN")
-    expect(page).to have_content("Developer")
   end
 
   it 'a user sees the contacts associated with the company' do
