@@ -12,3 +12,27 @@
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
+.butt-on-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.click-me {
+  height: 100%;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background-color: rgba(230,233,237,1.0);
+  box-shadow: 5px 5px gray;
+}
+
+a:hover {
+  text-decoration: none;
+}
