@@ -20,10 +20,8 @@
     <%= f.label 'City: ' %>
     <%= f.text_field :city %>
   </div>
-  <div>
-    <%= f.submit %>
-  </div>
-  <div>
-    <%= link_to 'Cancel', company_path(@company) %>
+  <div class='job-buttons'>
+    <button type="button" class="btn btn-secondary">Cancel</button>
+    <button type="button" class="btn btn-secondary">Update</button>
   </div>
 <% end %>
