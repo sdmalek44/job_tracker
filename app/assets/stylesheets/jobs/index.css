@@ -1,0 +1,23 @@
+.head-style {
+  height: 100px;
+  background-color: rgba(230,233,237,1.0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.big-letters {
+  font-size: 50px;
+}
+
+.align-self {
+  align-self: flex-end;
+}
+
+.wider-thing {
+  width: 200px;
+}
+
+.white {
+  color: white;
+}

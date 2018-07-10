@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
 
   def index
+    @cities = Job.distinct.pluck(:city)
     if params[:sort] == "interest"
       @jobs = Job.order(level_of_interest: :desc)
     elsif params[:sort]
