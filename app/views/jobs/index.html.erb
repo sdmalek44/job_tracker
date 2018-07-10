@@ -2,11 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Jobs</title>
   </head>
   <body>
-    <header class="header">
-      <div>All Jobs</div>
+    <header class="head-style">
+      <div class="big-letters">All Jobs</div>
+      <div class="btn-group align-self" role="group" aria-label="Button group with nested dropdown">
+          <%= link_to "Order by Location", "/jobs?sort=location", class: 'btn btn-secondary wider-thing white' %>
+          <%= link_to "Order by Interest", "/jobs?sort=interest", class: 'btn btn-secondary wider-thing white' %>
+          <div class="btn-group wider-thing" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle wider-thing" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Search Location
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <% @cities.each do |city| %>
+              <a class="dropdown-item" href="/jobs?location=<%= city %>"><%= city %></a>
+              <% end %>
+            </div>
+          </div>
+        </div>
     </header>
     <section class="whole">
       <article class="main">
