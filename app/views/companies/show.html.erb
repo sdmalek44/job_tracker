@@ -19,10 +19,16 @@
         <div class='row'></div>
         <div class='row'>
           <div class='col-sm' align='center'>
-            <h3><%= link_to "Create New Job for #{@company.name}", new_company_job_path(@company) %></h3>
             <h3><%= link_to "View Current #{@company.name} Jobs", company_jobs_path(@company) %></h3>
-            <h3 align='center'>Existing Contacts</h3>
-            <div class='contacts'>
+            <h3><%= link_to "Create New #{@company.name} Job", new_company_job_path(@company) %></h3>
+            <div class='col-sm' align='center' id='new-contact-form'>
+              <h4 align='left'>Create New Contact for <%= @company.name %></h4>
+              <div align='left'><%= render partial: 'contacts/form' %></div>
+            </div>
+          </div>
+          <div class='col-sm' align='center'>
+          <h3 align='center' class='existing-contacts-header'>Contacts for <%= @company.name %></h3>
+          <div class='contacts'>
               <% @contacts.each do |contact| %>
                 <div class='individual-contacts'>
                   <h5 align='left'><%= contact.name %></h5>
@@ -35,12 +41,6 @@
               <% end %>
             </div>
           </div>
-          <div class='row'></div>
-          <div class='col-sm' align='center' id='new-contact-form'>
-            <h4 align='left'>Create New Contact for <%= @company.name %></h4>
-            <div align='left'><%= render partial: 'contacts/form' %></div>
-          </div>
-          <div class='row'></div>
         </div>
       </div>
     </section>

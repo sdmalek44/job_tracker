@@ -5,9 +5,15 @@
     <title></title>
   </head>
   <body>
-    <header class='header'>
+    <header class='category-show-header'>
       <h1><%= @category.title %> Category</h1>
     </header>
+    <section class='subheader'>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <%= link_to "Delete", category_path(@category), class: "btn btn-secondary", id:'delete-button', method: 'delete', data: {confirm: "Really want to delete this company?"} %>
+        <%= link_to "Edit", edit_category_path(@category), class: "btn btn-secondary", id:'delete-button', method: 'get' %>
+      </div>
+    </section>
     <div class='category-positions' align='center'>
       <section class='category-show-main'>
         <table class="table table-striped container-fluid">

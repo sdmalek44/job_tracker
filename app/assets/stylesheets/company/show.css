@@ -27,16 +27,22 @@
 
 .contacts {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .individual-contacts {
   width: 220px;
+  height: 140px;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px grey;
   background-color: rgba(230,233,237,1.0);
+}
+
+.existing-contacts-header {
+  border-bottom: 2px solid black;
 }
 
 #delete-button {
