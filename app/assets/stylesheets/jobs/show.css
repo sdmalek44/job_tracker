@@ -1,5 +1,4 @@
-.bolded {
-  font-weight: bold;
+.un-line {
   text-decoration: underline;
 }
 
@@ -31,4 +30,9 @@
   border-radius: 15px;
   background-color: rgba(230,233,237,1.0);
   box-shadow: 5px 5px gray;
+  text-decoration: none;
+}
+
+.bolded {
+  font-weight: bold;
 }
