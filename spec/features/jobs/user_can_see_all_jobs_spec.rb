@@ -22,5 +22,17 @@ describe 'features' do
       expect(page).to have_content(job3.level_of_interest)
       expect(page).to have_content(job3.city)
     end
+
+    it 'can click on a specific job to view that job show page' do
+      company = Company.create!(name: 'NBC')
+      category = Category.create!(title: 'sports')
+      job = company.jobs.create!(title: 'person', level_of_interest: 10, city: 'Denver', category_id: category.id)
+
+      visit jobs_path
+
+      click_on job.title
+
+      expect(current_path).to eq(job_path(job))
+    end
   end
 end

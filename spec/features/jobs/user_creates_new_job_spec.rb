@@ -21,7 +21,7 @@ describe "User visits /companies/#/jobs/new" do
     expect(page).to have_content("Denver")
   end
 
-  it 'user can create a new category' do
+  it 'user can click a link to create a new category' do
     company = Company.create!(name: "ESPN")
     category = Category.create!(title: "sports")
     visit new_company_job_path(company)
