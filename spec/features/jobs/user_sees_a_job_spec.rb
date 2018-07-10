@@ -8,9 +8,9 @@ describe "User sees a specific job" do
 
     visit job_path(job)
 
-    expect(page).to have_content("ESPN")
-    expect(page).to have_content("Developer")
-    expect(page).to have_content("70")
+    expect(page).to have_content(job.title)
+    expect(page).to have_content(job.level_of_interest)
+    expect(page).to have_content(job.city)
   end
 
   it 'user can go to the job edit page' do
