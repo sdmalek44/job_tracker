@@ -23,7 +23,7 @@
             <tr>
               <td style="width: 80%"><%= link_to "#{company.name}", company_path(company) %></td>
               <td style="width: 5%"><%= link_to "Edit", edit_company_path(company) %></td>
-              <td style="width: 15%" align='center'><%= link_to "Delete", company_path(company), method: "delete" %></td>
+              <td style="width: 15%" align='center'><%= link_to "Delete", company_path(company), method: "delete", data: {confirm: "Really want to delete this category?"} %></td>
             </tr>
             <% end %>
           </tbody>
