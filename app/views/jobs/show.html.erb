@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="header">
-      <div>Job Title: <%= @job.title %></div>
+      <div><%= @job.title %> at <%= @job.company.name %></div>
     </header>
     <section class="butt-on-box">
       <a class="click-me btn-secondary" href="<%= edit_job_path(@job) %>">Edit</a>
