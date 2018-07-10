@@ -9,21 +9,19 @@
       <div>Job Title: <%= @job.title %></div>
     </header>
     <section class="butt-on-box">
-      <a class="click-me" href="<%= edit_job_path(@job) %>">Edit</a>
-      <div class="click-me">
-        <%= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
-      </div>
+      <a class="click-me btn-secondary" href="<%= edit_job_path(@job) %>">Edit</a>
+        <%= link_to "Delete", job_path(@job), class: "click-me btn-secondary", method: :delete, data: {confirm: "Really want to delete this job?"} %>
     </section>
     <div class="space-30"></div>
     <div class="container">
     <div class="row">
       <div class="col-5">
         <article class="colored padded">
-          <p><div class="bolded">Description: </div><%= @job.description %></p>
-          <p><div class="bolded">Level of Interest: </div> <%= @job.level_of_interest %></p>
-          <p><div class="bolded">City: </div> <%= @job.city %></p>
-          <p><div class="bolded">Company: </div> <%= link_to @job.company.name, company_path(@job.company) %></p>
-          <p><div class="bolded">Category: </div> <%= link_to @job.category.title, category_path(@job.category) %></p>
+          <p><div class="un-line bolded">Description: </div><%= @job.description %></p>
+          <p><div class="un-line bolded">Level of Interest: </div> <%= @job.level_of_interest %></p>
+          <p><div class="un-line bolded">City: </div> <%= @job.city %></p>
+          <p><div class="un-line bolded">Company: </div> <%= link_to @job.company.name, company_path(@job.company) %></p>
+          <p><div class="un-line bolded">Category: </div> <%= link_to @job.category.title, category_path(@job.category) %></p>
         </article>
       </div>
       <div class="col-2"></div>
