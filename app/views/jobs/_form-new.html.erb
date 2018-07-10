@@ -1,4 +1,4 @@
-<%= form_for @job do |f| %>
+<%= form_for [@company, @job] do |f| %>
   <div>
     <%= f.label 'Category: ' %>
     <%= f.collection_select :category_id, Category.order(:title), :id, :title, include_blank: true %>

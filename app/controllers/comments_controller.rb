@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     @job = Job.find(params[:job_id])
     @comment = @job.comments.create(comment_params)
 
-    redirect_to company_job_path(@comment.job.company, @comment.job)
+    redirect_to job_path(@comment.job)
   end
 
   private

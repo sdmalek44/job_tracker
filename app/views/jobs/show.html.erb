@@ -9,9 +9,9 @@
       <div>Job Title: <%= @job.title %></div>
     </header>
     <section class="butt-on-box">
-      <a class="click-me" href="<%= edit_company_job_path(@job.company, @job) %>">Edit</a>
+      <a class="click-me" href="<%= edit_job_path(@job) %>">Edit</a>
       <div class="click-me">
-        <%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
+        <%= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "Really want to delete this job?"} %>
       </div>
     </section>
     <div class="space-30"></div>
