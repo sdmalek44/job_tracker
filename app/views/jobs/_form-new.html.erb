@@ -1,0 +1,26 @@
+<%= form_for [@company, @job] do |f| %>
+  <div>
+    <%= f.label 'Category: ' %>
+    <%= f.collection_select :category_id, Category.order(:title), :id, :title, include_blank: true %>
+    <%= link_to 'add new category', new_category_path %>
+  </div>
+  <div>
+    <%= f.label 'Title: ' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label 'Description: ' %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.label 'Level of Interest: ' %>
+    <%= f.select :level_of_interest, (1..5) %>
+  </div>
+  <div>
+    <%= f.label 'City: ' %>
+    <%= f.text_field :city %>
+  </div>
+  <div class='job-buttons'>
+    <%= f.submit %>
+  </div>
+<% end %>

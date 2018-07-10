@@ -19,7 +19,7 @@
           <% @jobs.each do |job| %>
           <tbody>
             <tr>
-              <td align='center'><%= link_to job.title, company_job_path(job.company, job) %> at <%= job.company.name %></td>
+              <td align='center'><%= link_to job.title, job_path(job) %> at <%= job.company.name %></td>
             </tr>
             <% end %>
           </tbody>

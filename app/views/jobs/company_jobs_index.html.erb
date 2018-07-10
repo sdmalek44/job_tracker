@@ -6,26 +6,24 @@
   </head>
   <body>
     <header class="header">
-      <div>All Jobs</div>
+      <div>All Jobs for <%= @company.name %></div>
     </header>
     <section class="whole">
       <article class="main">
         <table class="table table-striped container-fluid">
           <thead>
             <tr class="table-primary">
-              <th style="width: 40%">Jobs</th>
-              <th style="width: 20%">Level of Interest</th>
-              <th style="width: 20%">Location</th>
-              <th style="width: 20%"><%= link_to 'Add a New Company', new_company_path %></th>
+              <th style="width: 40%">Job Title</th>
+              <th style="width: 20%">Company Name</th>
+              <th style="width: 20%"><%= link_to 'Add a New Job', new_company_job_path(@company) %></th>
             </tr>
           </thead>
           <tbody>
-            <% @jobs.each_with_index do |job, index| %>
+            <% @jobs.each do |job| %>
             <tr>
-              <td style="width: 40%"><%= link_to "#{job.title} at #{job.company.name}", job_path(job) %></td>
-              <td style="width: 20%"><%= job.level_of_interest %></td>
-              <td style="width: 20%"><%= job.city %></td>
-              <td style="width: 20%"></td>
+              <td style="width: 40%"><%= link_to job.title, job_path(job) %></td>
+              <td style="width: 20%"><%= job.company.name %></td>
+              <td style="width: 20%" align='center'></td>
             </tr>
             <% end %>
           </tbody>

@@ -8,7 +8,7 @@ describe 'features' do
       job_1 = company.jobs.create!(title: 'Cashier', level_of_interest: 12, city: 'Denver', category_id: category.id)
       job_2 = company.jobs.create!(title: 'Janitor', level_of_interest: 67, city: 'San Diego', category_id: category.id)
 
-      visit company_job_path(company, job_1)
+      visit job_path(job_1)
       click_on 'Delete'
 
       expect(current_path).to eq(company_jobs_path(company))

@@ -14,7 +14,7 @@ describe "User visits /companies/#/jobs/new" do
 
     click_button "Create Job"
 
-    expect(current_path).to eq("/companies/#{company.id}/jobs/#{Job.last.id}")
+    expect(current_path).to eq(job_path(Job.last))
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("1")

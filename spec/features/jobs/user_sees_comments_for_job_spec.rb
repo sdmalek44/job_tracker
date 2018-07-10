@@ -9,8 +9,8 @@ describe 'features' do
       comment1 = job.comments.create!(author: 'bobby bagadonats', body: 'you suck at your job. we lost every game')
       comment2 = job.comments.create!(author: 'billy bobabaguts', body: 'that was a great season coach')
 
-      visit company_job_path(company, job)
-      
+      visit job_path(job)
+
       expect(page).to have_content(comment1.author)
       expect(page).to have_content(comment1.body)
       expect(page).to have_content(comment2.author)

@@ -1,8 +1,19 @@
 class JobsController < ApplicationController
 
   def index
-    @company = Company.find(params[:company_id])
-    @jobs = @company.jobs
+    if params[:sort] == "interest"
+      @jobs = Job.order(level_of_interest: :desc)
+    elsif params[:sort]
+      @jobs = Job.order(:city)
+    elsif params[:location]
+      @jobs = Job.where(city: params[:location].titleize)
+    elsif params[:company_id]
+      @company = Company.find(params[:company_id])
+      @jobs = Job.where(company_id: params[:company_id])
+      render :company_jobs_index
+    else
+      @jobs = Job.all
+    end
   end
 
   def new
@@ -15,7 +26,7 @@ class JobsController < ApplicationController
     @job = @company.jobs.new(job_params)
     if @job.save
       flash[:success] = "You created #{@job.title} at #{@company.name}"
-      redirect_to company_job_path(@company, @job)
+      redirect_to job_path(@job)
     else
       flash.notice = "Please pass in all required fields"
       redirect_to new_company_job_path(@company)
@@ -45,19 +56,6 @@ class JobsController < ApplicationController
     @job.destroy
 
     redirect_to company_jobs_path(@job.company)
-  end
-
-  def all_jobs
-    if params[:sort] == "interest"
-      @jobs = Job.order(level_of_interest: :desc)
-    elsif params[:sort]
-      @jobs = Job.order(:city)
-    elsif params[:location]
-      @jobs = Job.where(city: params[:location].titleize)
-    else
-      @jobs = Job.all
-    end
-    render :all_jobs
   end
 
   private
