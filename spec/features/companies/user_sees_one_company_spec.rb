@@ -26,4 +26,23 @@ describe "User sees one company" do
     expect(page).to have_content(contact_2.position)
     expect(page).to have_content(contact_2.email)
   end
+
+  it 'a user can go to the edit page for a company' do
+    company = Company.create!(name: 'ESPN')
+    visit company_path(company)
+
+    click_on 'Edit'
+
+    expect(current_path).to eq(edit_company_path(company))
+  end
+
+  it 'a user can delete a company' do
+    company = Company.create!(name: 'ESPN')
+    visit company_path(company)
+
+    click_on 'Delete'
+
+    expect(current_path).to eq(companies_path)
+    expect(page).to have_content('ESPN was successfully deleted!')
+  end
 end

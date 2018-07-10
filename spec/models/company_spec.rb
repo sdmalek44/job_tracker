@@ -9,7 +9,10 @@ describe Company do
   describe "relationships" do
     it {should have_many :jobs}
     it {should have_many :contacts}
-    it 'should destroy jobs associated with company when company destroyed' do
+  end
+
+  describe 'dependent destroy' do
+    it 'should destroy jobs associated with company when company is destroyed' do
       company = Company.create!(name: "ESPN")
       category = Category.create!(title: "sports")
       company.jobs.create!(title: "Developer", level_of_interest: 1, city: "Denver", category_id: category.id)
@@ -20,6 +23,19 @@ describe Company do
       company.destroy
 
       expect(Job.count).to eq(0)
+    end
+
+    it 'should destroy contacts associated with company when company is destroyed' do
+      company = Company.create!(name: "ESPN")
+      company.contacts.create(name: 'Bob', position: 'manager', email: 'bob@email.com')
+      company.contacts.create(name: 'Joe', position: 'janitor', email: 'joe@email.com')
+
+
+      expect(Contact.count).to eq(2)
+
+      company.destroy
+
+      expect(Contact.count).to eq(0)
     end
   end
 

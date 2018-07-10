@@ -13,6 +13,22 @@ describe Job, type: :model do
     it{should have_many(:comments)}
   end
 
+  describe 'dependent destory' do
+    it 'should delete all associated comments when destroyed' do
+      company = Company.create!(name: "ESPN")
+      category = Category.create!(title: "sports")
+      job = company.jobs.create!(title: "Developer", level_of_interest: 1, city: "Denver", category_id: category.id)
+      job.comments.create(author: 'Joe', body: 'Hello')
+      job.comments.create(author: 'Bob', body: 'Goodbye')
+
+      expect(Comment.count).to eq(2)
+
+      job.destroy
+
+      expect(Comment.count).to eq(0)
+    end
+  end
+
   describe 'class methods' do
     it 'can count jobs by level of interest' do
       company = Company.create!(name: "ESPN")

@@ -18,7 +18,30 @@ describe 'features' do
       visit category_path(category)
 
       expect(page).to have_content(job_1.title)
-      expect(page).to have_content(job_2.title)    
+      expect(page).to have_content(job_2.title)
+    end
+    it 'user can click on a job to go to a job show page' do
+      company = Company.create!(name: 'sanitation plus')
+      category = Category.create!(title: 'poop scoopery')
+      job = company.jobs.create!(title: "sanitation expert", level_of_interest: 70, city: "Denver", category_id: category.id)
+
+      visit category_path(category)
+
+      click_on job.title
+
+      expect(current_path).to eq(job_path(job))
+    end
+
+    it 'user can go back to categoires' do
+      company = Company.create!(name: 'sanitation plus')
+      category = Category.create!(title: 'poop scoopery')
+      job = company.jobs.create!(title: "sanitation expert", level_of_interest: 70, city: "Denver", category_id: category.id)
+
+      visit category_path(category)
+
+      click_on 'Back to Categories'
+
+      expect(current_path).to eq(categories_path)
     end
   end
 end

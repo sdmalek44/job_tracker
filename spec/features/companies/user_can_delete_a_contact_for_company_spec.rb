@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'features' do
   describe 'when a user visits /companies/#' do
-    it  'can delete a company' do
+    it  'can delete a contact' do
       company = Company.create!(name: 'ESPN')
       contact = company.contacts.create!(name: 'bobby', position: 'newscaster', email: 'dkflkj@yahoozle.com')
 

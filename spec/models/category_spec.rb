@@ -7,7 +7,9 @@ describe Category, type: :model do
 
   describe 'relationships' do
     it{should have_many :jobs}
+  end
 
+  describe 'dependent destroy' do
     it 'deletes jobs associated with deleted category' do
       company = Company.create!(name: "ESPN")
       category = Category.create!(title: "sports")
