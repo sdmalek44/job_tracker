@@ -10,8 +10,8 @@
     </header>
     <section class='subheader'>
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary" id='delete-button'>Delete</button>
-        <button type="button" class="btn btn-secondary">Edit</button>
+        <%= link_to "Delete", company_path(@company), class: "btn btn-secondary", id:'delete-button', method: 'delete', data: {confirm: "Really want to delete this job?"} %>
+        <%= link_to "Edit", edit_company_path(@company), class: "btn btn-secondary", id:'delete-button', method: 'get' %>
       </div>
     </section>
     <section class='job-show-main'>
@@ -19,7 +19,8 @@
         <div class='row'></div>
         <div class='row'>
           <div class='col-sm' align='center'>
-            <h3><%= link_to "Jobs for #{@company.name}", company_jobs_path(@company) %></h3>
+            <h3><%= link_to "Create New Job for #{@company.name}", new_company_job_path(@company) %></h3>
+            <h3><%= link_to "View Current #{@company.name} Jobs", company_jobs_path(@company) %></h3>
             <h3 align='center'>Existing Contacts</h3>
             <div class='contacts'>
               <% @contacts.each do |contact| %>

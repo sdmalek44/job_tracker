@@ -44,6 +44,7 @@
 }
 
 #new-contact-form {
+  margin-left: 10px;
   height: 250px;
   width: 300px;
   background-color: rgba(230,233,237,1.0);

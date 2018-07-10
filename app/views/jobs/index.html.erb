@@ -14,18 +14,18 @@
           <thead>
             <tr class="table-primary">
               <th style="width: 40%">Jobs</th>
+              <th></th>
               <th style="width: 20%">Level of Interest</th>
               <th style="width: 20%">Location</th>
-              <th style="width: 20%"><%= link_to 'Add a New Company', new_company_path %></th>
             </tr>
           </thead>
           <tbody>
             <% @jobs.each_with_index do |job, index| %>
             <tr>
               <td style="width: 40%"><%= link_to "#{job.title} at #{job.company.name}", job_path(job) %></td>
+              <td style="width: 20%"></td>
               <td style="width: 20%"><%= job.level_of_interest %></td>
               <td style="width: 20%"><%= job.city %></td>
-              <td style="width: 20%"></td>
             </tr>
             <% end %>
           </tbody>
