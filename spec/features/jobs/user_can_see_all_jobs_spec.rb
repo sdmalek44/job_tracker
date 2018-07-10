@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'features' do
-  describe 'when visitin /jobs user' do
+  describe 'when visiting /jobs user' do
     it 'can see all of the jobs in the database' do
       company1 = Company.create!(name: 'NBC')
       company2 = Company.create!(name: 'ESPN')
