@@ -37,7 +37,7 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     @job.update(job_params)
-    redirect_to company_job_path(@job.company, @job)
+    redirect_to job_path(@job)
   end
 
   def destroy
