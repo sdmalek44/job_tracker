@@ -9,7 +9,8 @@ describe 'when visiting /categories/new' do
     fill_in :category_title, with: 'poop scoopery'
     click_on 'Create Category'
 
-    expect(current_path).to eq(category_path(1))
+    expect(current_path).to eq(category_path(Category.last))
+     expect(page).to have_content("#{Category.last.title} was successfully created!")
     expect(page).to have_content('poop scoopery')
   end
 

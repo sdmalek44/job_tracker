@@ -53,9 +53,9 @@ describe 'when user visits /categories/# they' do
     click_on 'Delete'
 
     expect(current_path).to eq(categories_path)
-    expect(page).to_not have_content(category.title)
+    expect(page).to have_content("#{category.title} was successfully deleted!")
   end
-  
+
   it 'user can view an edit category page' do
     category = Category.create!(title: 'poop scoopery')
 

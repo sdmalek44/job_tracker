@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
       redirect_to new_category_path
     else
       @category.save
+      flash[:success] = "#{@category.title} was successfully created!"
       redirect_to category_path(@category)
     end
   end
@@ -37,7 +38,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
-
+    flash[:success] = "#{@category.title} was successfully deleted!"
     redirect_to categories_path
   end
 
