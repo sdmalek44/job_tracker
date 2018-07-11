@@ -24,4 +24,12 @@ describe 'when visiting /categories/new' do
     expect(current_path).to eq(new_category_path)
     expect(page).to have_content('Sorry, the medicine category already exists')
   end
+
+  it 'clicking cancel takes user back to the categoires index' do
+    visit new_category_path
+
+    click_on 'Cancel'
+
+    expect(current_path).to eq(categories_path)
+  end
 end
