@@ -14,8 +14,8 @@
           <thead>
             <tr class="table-primary">
               <th style="width: 25%">Company</th>
-              <th style="width: 25%"><%= link_to 'Add a New Company', new_company_path %></th>
-              <th style="width: 40%"></th>
+              <th style="width: 35%"><%= link_to 'Add a New Company', new_company_path %></th>
+              <th style="width: 25%">Job Count</th>
               <th style="width: 5%"></th>
               <th style="width: 5%"></th>
             </tr>
@@ -24,8 +24,8 @@
             <% @companies.each_with_index do |company, index| %>
             <tr>
               <td style="width: 25%"><%= link_to "#{company.name}", company_path(company) %></td>
-              <td style="width: 25%"></td>
-              <td style="width: 40%"><%= link_to "#{company.jobs.length} Jobs", company_jobs_path(company) %></td>
+              <td style="width: 35%"></td>
+              <td style="width: 25%"><%= link_to "#{company.jobs.length} Jobs", company_jobs_path(company) %></td>
               <td style="width: 5%"><%= link_to "Edit", edit_company_path(company) %></td>
               <td style="width: 5%" align='center'><%= link_to "Delete", company_path(company), method: "delete", data: {confirm: "Really want to delete this category?"} %></td>
             </tr>
