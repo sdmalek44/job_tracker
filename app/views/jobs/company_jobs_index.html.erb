@@ -22,13 +22,12 @@
             <% @jobs.each do |job| %>
             <tr>
               <td style="width: 40%"><%= link_to job.title, job_path(job) %></td>
-              <td style="width: 20%"><%= job.company.name %></td>
+              <td style="width: 20%"><%= @company.name %></td>
               <td style="width: 20%" align='center'></td>
             </tr>
             <% end %>
           </tbody>
         </table>
-        <div class="colored"><%= link_to '<< Back to Companies', companies_path %><div>
       </article>
     </section>
   </body>
