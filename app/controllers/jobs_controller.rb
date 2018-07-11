@@ -47,14 +47,9 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job = Job.update(params[:id], job_params)
-    if @job.save
-      flash[:success] = "You updated #{@job.title} at #{@job.company.name}"
-      redirect_to job_path(@job)
-    else
-      flash.notice = "Please pass in all required fields"
-      render :edit
-    end
+    @job.update(job_params)
+    flash[:success] = "You updated #{@job.title} at #{@job.company.name}"
+    redirect_to job_path(@job)
   end
 
   def destroy
