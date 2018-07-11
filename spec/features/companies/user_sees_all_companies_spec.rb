@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe "User visits /companies" do
-  it "sees all the companies" do
-    company_1 = Company.create!(name: "ESPN")
-    company_2 = Company.create!(name: "Disney")
+describe 'User visits /companies' do
+  it 'sees all the companies' do
+    company_1 = Company.create!(name: 'ESPN')
+    company_2 = Company.create!(name: 'Disney')
 
     visit companies_path
 
@@ -12,7 +12,7 @@ describe "User visits /companies" do
   end
 
   it 'user can visit a specific company show page' do
-    company = Company.create!(name: "ESPN")
+    company = Company.create!(name: 'ESPN')
 
     visit companies_path
 
@@ -30,7 +30,7 @@ describe "User visits /companies" do
   end
 
   it 'can visit the edit page for a specific company' do
-    company = Company.create!(name: "ESPN")
+    company = Company.create!(name: 'ESPN')
 
     visit companies_path
 
@@ -40,7 +40,7 @@ describe "User visits /companies" do
   end
 
   it 'can delete a specfic company' do
-    company = Company.create!(name: "ESPN")
+    company = Company.create!(name: 'ESPN')
 
     visit companies_path
 
