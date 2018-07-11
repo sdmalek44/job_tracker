@@ -12,7 +12,7 @@ class JobsController < ApplicationController
       @jobs = Job.where(city: params[:location].titleize)
     elsif params[:company_id]
       @company = Company.find(params[:company_id])
-      @jobs = Job.where(company_id: params[:company_id])
+      @jobs = Job.where(company_id: params[:company_id]).includes(:category)
       render :company_jobs_index
     else
       @jobs = Job.all

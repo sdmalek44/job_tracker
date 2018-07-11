@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :update, :edit, :destroy]
 
   def index
-    @companies = Company.all
+    @companies = Company.all.includes(:jobs)
   end
 
   def new
