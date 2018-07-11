@@ -19,4 +19,12 @@ describe 'User creates a new company' do
     expect(current_path).to eq(new_company_path)
     expect(page).to have_content('Please enter a name for your company')
   end
+
+  it 'clicking cancel takes user back to the company index' do
+    visit new_company_path
+
+    click_on 'Cancel'
+
+    expect(current_path).to eq(companies_path)
+  end
 end
