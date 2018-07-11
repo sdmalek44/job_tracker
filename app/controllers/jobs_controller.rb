@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  before_action :set_job, only: [:show, :update, :edit, :destroy]
 
   def index
     @cities = Job.distinct.pluck(:city)
@@ -36,14 +37,12 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id])
     @company = @job.company
     @comment = Comment.new
     @comment.job_id = @job.id
   end
 
   def edit
-    @job = Job.find(params[:id])
     @company = @job.company
   end
 
@@ -59,9 +58,7 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    @job = Job.find(params[:id])
     @job.destroy
-
     redirect_to company_jobs_path(@job.company)
   end
 
@@ -69,5 +66,9 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job).permit(:title, :description, :level_of_interest, :city, :category_id)
+  end
+
+  def set_job
+    @job = Job.find(params[:id])
   end
 end
