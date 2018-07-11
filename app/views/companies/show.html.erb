@@ -19,8 +19,8 @@
         <div class='row'></div>
         <div class='row'>
           <div class='col-sm' align='center'>
-            <h3><%= link_to "View Current #{@company.name} Jobs", company_jobs_path(@company) %></h3>
-            <h3><%= link_to "Create New #{@company.name} Job", new_company_job_path(@company) %></h3>
+            <h3 class="new-pad"><%= link_to "View Current #{@company.name} Jobs", company_jobs_path(@company) %></h3>
+            <h3 class="new-pad"><%= link_to "Create New #{@company.name} Job", new_company_job_path(@company) %></h3>
             <div class='col-sm' align='center' id='new-contact-form'>
               <h4 align='left'>Create New Contact for <%= @company.name %></h4>
               <div align='left'><%= render partial: 'contacts/form' %></div>
