@@ -36,3 +36,8 @@
 .bolded {
   font-weight: bold;
 }
+
+.new-pad {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
