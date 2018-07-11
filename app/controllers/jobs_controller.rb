@@ -48,8 +48,13 @@ class JobsController < ApplicationController
 
   def update
     @job.update(job_params)
-    flash[:success] = "You updated #{@job.title} at #{@job.company.name}"
-    redirect_to job_path(@job)
+    if @job.save
+      flash[:success] = "You updated #{@job.title} at #{@job.company.name}"
+      redirect_to job_path(@job)
+    else
+      flash[:notice] = "invalid input"
+      render :edit
+    end
   end
 
   def destroy
