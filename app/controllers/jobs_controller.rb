@@ -4,9 +4,9 @@ class JobsController < ApplicationController
   def index
     @cities = Job.distinct.pluck(:city)
     @companys = Company.all
-    if params[:sort] == "interest"
+    if params[:sort] == 'interest'
       @jobs = Job.order(level_of_interest: :desc)
-    elsif params[:sort]
+    elsif params[:sort] == 'location'
       @jobs = Job.order(:city)
     elsif params[:location]
       @jobs = Job.where(city: params[:location].titleize)
@@ -31,7 +31,7 @@ class JobsController < ApplicationController
       flash[:success] = "You created #{@job.title} at #{@company.name}"
       redirect_to job_path(@job)
     else
-      flash.notice = "Please pass in all required fields"
+      flash.notice = 'Please pass in all required fields'
       render :new
     end
   end
