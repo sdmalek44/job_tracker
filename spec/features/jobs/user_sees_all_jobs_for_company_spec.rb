@@ -13,16 +13,16 @@ describe 'when user goes to /companies/#/jobs' do
     expect(page).to have_content(job1.title)
     expect(page).to have_content(job1.level_of_interest)
     expect(page).to have_content(job1.city)
-    expect(page).to have_content(job1.category.name)
+    expect(page).to have_content(job1.category.title)
 
     expect(page).to have_content(job2.title)
     expect(page).to have_content(job2.level_of_interest)
     expect(page).to have_content(job2.city)
-    expect(page).to have_content(job2.category.name)
+    expect(page).to have_content(job2.category.title)
 
     expect(page).to have_content(job3.title)
     expect(page).to have_content(job3.level_of_interest)
     expect(page).to have_content(job3.city)
-    expect(page).to have_content(job3.category.name)
+    expect(page).to have_content(job3.category.title)
   end
 end
