@@ -2,5 +2,6 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 
-  <%= f.submit class:"btn btn-primary"%>
+  <%= f.submit class: "btn btn-primary" %>
+  <%= link_to 'Cancel', categories_path, class: 'btn btn-danger', id: 'category-cancel-button'%>
 <% end %>

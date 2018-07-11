@@ -46,4 +46,14 @@ describe 'User visits /companies/#/jobs/new' do
     expect(current_path).to eq(company_jobs_path(company))
     expect(page).to have_content('Please pass in all required fields')
   end
+
+  it 'clicking cancel takes user back to the jobs index' do
+    company = Company.create!(name: 'ESPN')
+
+    visit new_company_job_path(company)
+
+    click_on 'Cancel'
+
+    expect(current_path).to eq(jobs_path)
+  end
 end

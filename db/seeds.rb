@@ -15,7 +15,7 @@ COMPANIES.each do |name|
   puts "Created #{company.name}"
   10.times do |num|
     job = company.jobs.create!(title: JOBS.sample, description: "What a great position!", level_of_interest: rand(1..5), city: CITIES.sample, category_id: CATEGORIES.sample.id)
-    2.times do
+    4.times do
       job.comments.create!(author: COMMENT_NAMES.sample, body: COMMENT_BODIES.sample)
     end
   end

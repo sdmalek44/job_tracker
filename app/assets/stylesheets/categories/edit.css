@@ -12,3 +12,8 @@
   display: flex;
   justify-content: center;
 }
+
+#category-cancel-button {
+  padding-left: 50px;
+  padding-right: 50px;
+}
