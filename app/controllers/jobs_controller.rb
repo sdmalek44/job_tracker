@@ -39,6 +39,7 @@ class JobsController < ApplicationController
   def show
     @company = @job.company
     @comment = Comment.new
+    @comments = @job.comments.reverse
     @comment.job_id = @job.id
   end
 
@@ -52,7 +53,8 @@ class JobsController < ApplicationController
       flash[:success] = "You updated #{@job.title} at #{@job.company.name}"
       redirect_to job_path(@job)
     else
-      flash[:notice] = "invalid input"
+      @company = @job.company
+      flash[:notice] = "Invalid Input"
       render :edit
     end
   end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'features' do
-  describe 'user visits /companies/#/jobs/#' do
+  describe '/jobs/#' do
     it 'user can delete a job' do
       company = Company.create!(name: 'Best Buy')
       category = Category.create!(title: "sports")

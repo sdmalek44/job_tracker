@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="header">
-      <div><%= @job.title %> at <%= @job.company.name %></div>
+      <div><%= @job.title %> at <%= @company.name %></div>
     </header>
     <section class="butt-on-box">
       <a class="click-me btn-secondary" href="<%= edit_job_path(@job) %>">Edit</a>
@@ -28,7 +28,7 @@
       <article class="col-5">
         <div class="colored padded">
           <h3>Comments Section</h3>
-          <%= render partial: 'comment', collection: @job.comments.reverse %>
+          <%= render partial: 'comment', collection: @comments %>
           <div class="border-t">
             <%= render partial: 'comments/form' %>
           </div>

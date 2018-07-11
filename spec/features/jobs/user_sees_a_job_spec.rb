@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe "User sees a specific job" do
-  it "a user sees a job for a specific company" do
-    company = Company.create!(name: "ESPN")
-    category = Category.create!(title: "sports")
-    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
+describe 'user sees a specific job' do
+  it 'a user sees a job for a specific company' do
+    company = Company.create!(name: 'ESPN')
+    category = Category.create!(title: 'sports')
+    job = company.jobs.create!(title: 'Developer', level_of_interest: 70, city: 'Denver', category_id: category.id)
 
     visit job_path(job)
 
@@ -14,9 +14,9 @@ describe "User sees a specific job" do
   end
 
   it 'user can go to the job edit page' do
-    company = Company.create!(name: "ESPN")
-    category = Category.create!(title: "sports")
-    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
+    company = Company.create!(name: 'ESPN')
+    category = Category.create!(title: 'sports')
+    job = company.jobs.create!(title: 'Developer', level_of_interest: 70, city: 'Denver', category_id: category.id)
 
     visit job_path(job)
 
@@ -26,9 +26,9 @@ describe "User sees a specific job" do
   end
 
   it 'user can delete a job' do
-    company = Company.create!(name: "ESPN")
-    category = Category.create!(title: "sports")
-    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
+    company = Company.create!(name: 'ESPN')
+    category = Category.create!(title: 'sports')
+    job = company.jobs.create!(title: 'Developer', level_of_interest: 70, city: 'Denver', category_id: category.id)
 
     visit job_path(job)
 
