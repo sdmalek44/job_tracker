@@ -10,6 +10,7 @@ describe 'user visits /categories/#/edit' do
     click_on 'Update Category'
 
     expect(current_path).to eq(category_path(category))
+    expect(page).to have_content('Category updated')
     expect(page).to have_content('Janitorial')
   end
 
