@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
 
   def update
     @category.update(category_params)
-    flash.notice = "Category updated"
+    flash.notice = 'Category updated'
 
     redirect_to category_path(@category)
   end
