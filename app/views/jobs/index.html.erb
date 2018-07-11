@@ -6,10 +6,21 @@
   </head>
   <body>
     <header class="head-style">
-      <div class="big-letters">All Jobs</div>
+      <div class="big-letters">Jobs</div>
+      <div class="dropdown align-self">
+        <button class="btn btn-secondary dropdown-toggle wider-thing" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Create a New Job
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <h4 class="pad-it">Pick a Company</h4>
+          <% @companys.each do |company| %>
+          <a class="dropdown-item" href="/companies/<%= company.id %>/jobs/new"><%= company.name %></a>
+          <% end %>
+        </div>
+      </div>
       <div class="btn-group align-self" role="group" aria-label="Button group with nested dropdown">
-          <%= link_to "Order by Location", "/jobs?sort=location", class: 'btn btn-secondary wider-thing white' %>
-          <%= link_to "Order by Interest", "/jobs?sort=interest", class: 'btn btn-secondary wider-thing white' %>
+          <%= link_to "Order All by Location", "/jobs?sort=location", class: 'btn btn-secondary wider-thing white' %>
+          <%= link_to "Order All by Interest", "/jobs?sort=interest", class: 'btn btn-secondary wider-thing white' %>
           <div class="btn-group wider-thing" role="group">
             <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle wider-thing" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Search Location

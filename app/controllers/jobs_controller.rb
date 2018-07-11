@@ -3,6 +3,7 @@ class JobsController < ApplicationController
 
   def index
     @cities = Job.distinct.pluck(:city)
+    @companys = Company.all
     if params[:sort] == "interest"
       @jobs = Job.order(level_of_interest: :desc)
     elsif params[:sort]
@@ -31,7 +32,7 @@ class JobsController < ApplicationController
       redirect_to job_path(@job)
     else
       flash.notice = "Please pass in all required fields"
-      redirect_to new_company_job_path(@company)
+      render :new
     end
   end
 
@@ -46,8 +47,14 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job.update(job_params)
-    redirect_to job_path(@job)
+    @job = Job.update(params[:id], job_params)
+    if @job.save
+      flash[:success] = "You updated #{@job.title} at #{@job.company.name}"
+      redirect_to job_path(@job)
+    else
+      flash.notice = "Please pass in all required fields"
+      render :edit
+    end
   end
 
   def destroy

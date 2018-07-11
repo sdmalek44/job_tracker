@@ -28,7 +28,7 @@ describe 'features' do
         click_on 'Update Job'
 
         expect(current_path).to eq(job_path(job))
-        expect(page).to have_content('Title: Janitor')
+        expect(page).to have_content("Janitor at #{company.name}")
         expect(page).to have_content('Description: Cleaning')
         expect(page).to have_content("Level of Interest: 1")
         expect(page).to have_content("City: San Diego")
