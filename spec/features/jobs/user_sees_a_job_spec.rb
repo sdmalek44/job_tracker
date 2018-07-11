@@ -35,6 +35,6 @@ describe 'user sees a specific job' do
     click_on 'Delete'
 
     expect(current_path).to eq(company_jobs_path(company))
-    expect(page).to_not have_content(job.title)
+    expect(page).to have_content("You successfully deleted #{job.title}")
   end
 end
