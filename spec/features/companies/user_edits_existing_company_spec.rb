@@ -9,7 +9,7 @@ describe 'User edits an existing company' do
     click_button 'Update'
 
     expect(current_path).to eq(company_path(1))
-    expect(page).to have_content('EA Sports')
+    expect(page).to have_content('EA Sports updated!')
     expect(page).to_not have_content('ESPN')
   end
 

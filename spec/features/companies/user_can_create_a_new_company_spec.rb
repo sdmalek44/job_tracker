@@ -8,7 +8,7 @@ describe 'User creates a new company' do
     click_button 'Create'
 
     expect(current_path).to eq(company_path(1))
-    expect(page).to have_content('ESPN')
+    expect(page).to have_content('ESPN added!')
   end
 
   it 'a user cannot create a company without entering a name' do
