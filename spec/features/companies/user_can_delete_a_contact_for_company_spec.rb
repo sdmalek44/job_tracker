@@ -10,7 +10,7 @@ describe 'features' do
 
       expect(page).to have_content(contact.name)
 
-      click_on "Delete Contact"
+      click_on 'Delete Contact'
 
       expect(current_path).to eq(company_path(company))
       expect(page).to_not have_content(contact.name)
